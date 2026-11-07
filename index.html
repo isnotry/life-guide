@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>好睡眠是白天修出来的 · 睡眠修复指南</title>
+<style>
+:root{
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2230; --surface3:#232a38;
+  --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
+  --text:#e6edf3; --text2:#98a4b3; --text3:#6e7a8a;
+  --teal:#5DCAA5; --teal-dim:rgba(93,202,165,.14);
+  --amber:#EF9F27; --amber-dim:rgba(239,159,39,.14);
+  --red:#E24B4A; --red-dim:rgba(226,75,74,.14);
+  --blue:#58a6ff; --blue-dim:rgba(88,166,255,.14);
+  --r:12px; --r-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue",sans-serif;
+  font-size:16px; line-height:1.85; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+header{padding:76px 0 44px;border-bottom:1px solid var(--border)}
+.kicker{font-size:12px;letter-spacing:.16em;color:var(--teal);font-weight:500;margin-bottom:18px}
+h1{font-size:40px;line-height:1.28;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
+h1 em{font-style:normal;color:var(--teal)}
+.sub{font-size:17px;color:var(--text2)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.pill{font-size:13px;border-radius:999px;padding:5px 13px;background:var(--surface2);
+  border:1px solid var(--border);color:var(--text2)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;white-space:nowrap;
+  padding:15px 11px;border-bottom:2px solid transparent;transition:.15s}
+nav a:hover{color:var(--text)}
+nav a.on{color:var(--teal);border-bottom-color:var(--teal)}
+
+section{padding:58px 0;border-bottom:1px solid var(--border)}
+.sec-n{font-size:12px;color:var(--text3);font-weight:500;letter-spacing:.12em;margin-bottom:12px}
+h2{font-size:26px;font-weight:600;margin-bottom:14px;letter-spacing:-.01em;line-height:1.4}
+.lead{color:var(--text2);font-size:16.5px;margin-bottom:30px}
+h3{font-size:18px;font-weight:600;margin:40px 0 14px;padding-top:4px}
+h4{font-size:16px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:var(--text2)}
+p b,li b,strong{color:var(--text);font-weight:600}
+ul,ol{margin:0 0 18px;padding-left:0;list-style:none}
+li{position:relative;padding-left:18px;margin-bottom:11px;color:var(--text2)}
+li:before{content:"";position:absolute;left:1px;top:13px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+ol{counter-reset:li}
+ol li{padding-left:28px;counter-increment:li}
+ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;height:auto;
+  background:none;color:var(--teal);font-size:13px;font-weight:600}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;margin-bottom:20px}
+.card.t{border-color:rgba(93,202,165,.28)}
+.card.b{border-color:rgba(88,166,255,.28)}
+.card.r{border-color:rgba(226,75,74,.25)}
+.card-h{font-size:16.5px;font-weight:600;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.tagline{font-size:12px;border-radius:5px;padding:1px 8px;font-weight:500;margin-right:8px}
+.tag-blue{background:var(--blue-dim);color:var(--blue)}
+.tag-teal{background:var(--teal-dim);color:var(--teal)}
+
+.spec{display:inline-block;font-size:13px;color:var(--teal);background:var(--teal-dim);
+  border-radius:6px;padding:2px 10px;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.spec.amb{color:var(--amber);background:var(--amber-dim)}
+
+.note{border-left:2px solid var(--amber);padding:3px 0 3px 18px;margin:24px 0;color:var(--text2)}
+.note.teal{border-color:var(--teal)} .note.red{border-color:var(--red)}
+
+/* timeline */
+.tl{position:relative;padding-left:4px;margin-top:6px}
+.tl-item{position:relative;padding:0 0 36px 36px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:before{content:"";position:absolute;left:9px;top:26px;bottom:0;width:1px;background:var(--border2)}
+.tl-item:last-child:before{display:none}
+.tl-dot{position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;
+  background:var(--surface3);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center}
+.tl-dot i{width:7px;height:7px;border-radius:50%;background:var(--teal);display:block}
+.tl-dot.b i{background:var(--blue)}
+.tl-time{font-size:12.5px;color:var(--teal);font-weight:500;letter-spacing:.04em}
+.tl-dot.b+.tl-time{color:var(--blue)}
+.tl-t{font-size:17px;font-weight:600;margin:4px 0 6px;line-height:1.5}
+.tl-d p:last-of-type{margin-bottom:0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.pnl{border-radius:var(--r-lg);padding:20px 22px;border:1px solid var(--border)}
+.pnl.y{background:var(--teal-dim);border-color:rgba(93,202,165,.25)}
+.pnl.n{background:var(--red-dim);border-color:rgba(226,75,74,.25)}
+.pnl h4{margin:0 0 12px;font-size:15px}
+.pnl.y h4{color:var(--teal)} .pnl.n h4{color:var(--red)}
+.pnl li{margin-bottom:9px;font-size:14.5px;line-height:1.7}
+.pnl.y li:before{background:var(--teal)} .pnl.n li:before{background:var(--red)}
+.pnl li:last-child{margin-bottom:0}
+
+/* evidence */
+.ev{border-left:2px solid var(--border2);padding:2px 0 2px 16px;margin:14px 0 0;font-size:14px;
+  color:var(--text3);line-height:1.8;display:none}
+.ev.on{display:block}
+.ev b{color:var(--text2);font-weight:600}
+.evtog{font-size:13px;color:var(--text3);cursor:pointer;background:none;border:none;
+  padding:6px 0 0;text-decoration:underline;text-underline-offset:3px}
+.evtog:hover{color:var(--teal)}
+.evref{display:inline-block;font-size:11.5px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;margin:8px 5px 0 0;font-family:ui-monospace,monospace;cursor:pointer}
+.evref:hover{background:rgba(88,166,255,.3)}
+
+/* refs */
+.reflist{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.ref{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;
+  font-size:13.5px;color:var(--text2);line-height:1.7;display:flex;gap:13px;transition:.4s}
+.ref .id{flex:0 0 auto;font-size:11px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;font-family:ui-monospace,monospace;height:fit-content;white-space:nowrap}
+.ref b{color:var(--text);font-weight:600}
+.ref:target,.ref.hit{background:var(--blue-dim);border-color:var(--blue)}
+
+footer{padding:46px 0 70px;color:var(--text3);font-size:13px;line-height:1.85}
+footer b{color:var(--text2)}
+footer .repo{display:inline-block;margin-top:10px;color:var(--text3);text-decoration:underline;
+  text-decoration-color:var(--border2);text-underline-offset:3px;transition:.15s}
+footer .repo:hover{color:var(--teal)}
+@media(hover:none){footer .repo{text-decoration-color:var(--border2)}}
+@media(max-width:640px){
+  h1{font-size:29px} h2{font-size:22px} h3{font-size:17px}
+  body{font-size:15.5px} section{padding:44px 0} header{padding:54px 0 34px}
+  .grid2,.two{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">睡眠修复指南</div>
+    <h1>好睡眠不是等出来的，<em>是白天修出来的</em></h1>
+    <p class="sub">入睡由两套独立系统共同决定，缺一不可。这篇文章把睡眠拆成一天里几个具体时间点该做什么，每条建议都标注了原始研究与临床指南出处，数字也按研究结果校正过。</p>
+    <div class="pills">
+      <div class="pill">成人 7–9 小时</div>
+      <div class="pill">固定起床时间</div>
+      <div class="pill">晨光 10,000 lux</div>
+      <div class="pill">咖啡因睡前 6 小时截止</div>
+      <div class="pill">卧室 16–19°C</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#engine">两个引擎</a>
+    <a href="#morning">早晨</a>
+    <a href="#daytime">白天</a>
+    <a href="#evening">睡前</a>
+    <a href="#env">环境</a>
+    <a href="#awake">睡不着</a>
+    <a href="#plan">怎么开始</a>
+    <a href="#when">何时就医</a>
+    <a href="#refs">依据来源</a>
+  </div>
+</nav>
+
+<!-- ========== 01 ========== -->
+<section id="engine">
+  <div class="wrap">
+    <div class="sec-n">01 / 原理</div>
+    <h2>两个引擎，必须同时踩住</h2>
+    <p class="lead">入睡不是单一因素决定的，而是两套独立系统同时满足的结果。只处理一个都不行——这也是为什么很多人只靠"早睡"始终睡不好。</p>
+
+    <div class="grid2">
+      <div class="card b">
+        <div class="card-h"><span class="tagline tag-blue">引擎一</span>生物钟</div>
+        <p style="margin-bottom:0">由下丘脑的视交叉上核控制，是个定时器。它只认「几点几分」，不认「睡了几小时」。被晨光和起床时间锚定一次，之后自动运转。</p>
+      </div>
+      <div class="card t">
+        <div class="card-h"><span class="tagline tag-teal">引擎二</span>睡眠压力</div>
+        <p style="margin-bottom:0">清醒时大脑内腺苷不断堆积，堆到一定程度就是"困"。睡眠时被清空。所以白天清醒越久，晚上压力越足。</p>
+      </div>
+    </div>
+
+    <p>两台都到位，晚上自然轮到睡。<b>引擎一错位，引擎二再足也睡不着；引擎二被清空，引擎一正常也睁着眼到天亮。</b></p>
+
+    <p>专门搞坏这两台引擎的，是三件很日常的事：</p>
+    <ul>
+      <li><b>咖啡因</b>——阻断腺苷受体，直接压制睡眠压力</li>
+      <li><b>酒精</b>——透支睡眠压力，并破坏后半夜的睡眠结构</li>
+      <li><b>白天补觉和赖床</b>——提前把睡眠压力的额度花掉</li>
+    </ul>
+    <p>下面每一节都围绕这个逻辑展开。</p>
+  </div>
+</section>
+
+<!-- ========== 02 ========== -->
+<section id="morning">
+  <div class="wrap">
+    <div class="sec-n">02 / 早晨</div>
+    <h2>起床后的黄金一小时</h2>
+    <p class="lead">这一小时做的事决定整个昼夜节律的相位。生物钟最怕的不是"少睡"，是"乱"。</p>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">起床的那一刻</div>
+        <div class="tl-t">固定时间起床，误差不超过 30 分钟</div>
+        <div class="spec">每天同一时刻 · 误差 ≤30 分钟</div>
+        <div class="tl-d">
+          <p>前一晚哪怕只睡了 4 小时，也照常起。<b>这是整套方案的地基</b>，同时锚定两台引擎。多睡一会儿看着舒服，代价是削弱第二天的睡眠压力，让入睡更难。</p>
+          <div class="ev" data-for="m0">
+            <b>研究怎么说：</b>AASM 失眠行为治疗指南把固定起床时间列为 CBT-I 的核心锚点，刺激控制规则也要求"无论睡得如何，第二天都按固定时间起床"。窗口期一致性与较差主观睡眠质量、更高抑郁症状水平相关（Chaput 等 2020 系统综述，41 篇研究 / 92,340 人）。
+          </div>
+          <button class="evtog" data-t="m0">展开依据</button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">起床后 30–60 分钟内</div>
+        <div class="tl-t">出门见光 10–20 分钟</div>
+        <div class="spec">10,000 lux · 10–20 分钟 · 阴天照去</div>
+        <div class="tl-d">
+          <p>这是非药物干预里证据最强的一条。室内照度只有 100–500 lux，阴天户外有 10,000 lux 以上，差两个数量级。</p>
+          <p><b>所以必须真的出门</b>——站在窗边、隔着玻璃都无效，玻璃还会再损失 2–5 倍。阴天也值得去，户外阴天仍有 1,000–10,000 lux。遛狗、阳台喝咖啡、步行通勤都算。</p>
+          <div class="ev" data-for="m1">
+            <b>研究怎么说：</b>光照是主导授时因子，通过视网膜 ipRGC 细胞中的黑视素作用于视交叉上核，抑制褪黑素并触发皮质醇觉醒反应。有研究显示 30 分钟晨光可达到 2 小时方案约 75% 的纠偏效果；轮班工人光疗 Meta 分析显示总睡眠时间增加 30 分钟以上、睡眠效率提高约 3%。
+          </div>
+          <button class="evtog" data-t="m1">展开依据</button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">起床后 1 小时内</div>
+        <div class="tl-t">一杯温水 200–250 ml</div>
+        <div class="spec">200–250 ml · 早餐前</div>
+        <div class="tl-d">
+          <p>夜间经呼吸和排汗流失 400–700 ml 水分，晨起轻度脱水是普遍现象。轻微脱水（约 1.5% 体重）已证实会恶化情绪、降低注意力、加重头痛。空腹喝一杯就够，不必纠结水量。</p>
+          <div class="ev" data-for="m2">
+            <b>研究怎么说：</b>J Nutr 2011 报告 1.5% 体重脱水使女性情绪显著恶化、任务难度感知上升、注意力下降、头痛频率增加；MSSE 2010 显示 2% 脱水使有氧运动表现下降约 20%。
+          </div>
+          <button class="evtog" data-t="m2">展开依据</button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">起床后 2 小时内</div>
+        <div class="tl-t">吃早餐，开始一天的体力活动</div>
+        <div class="spec">运动放在白天档 · 睡前 3h 收工</div>
+        <div class="tl-d">
+          <p>有氧运动安排在白天任意时段都行，关键是别放到睡前 3 小时内。运动对睡眠有独立益处，不只是"累了所以困"——那时核心体温和交感神经还在高位，反而更难入睡。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note teal">
+      <b>实在出不了门：</b>用 10,000 lux 光疗灯，距离眼睛 20–35 cm、位置略高于视线、角度向下、不要直视，放在晨间洗漱或喝咖啡时用。这是临床上验证过的替代方案。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 ========== -->
+<section id="daytime">
+  <div class="wrap">
+    <div class="sec-n">03 / 白天</div>
+    <h2>白天做的事，晚上要还</h2>
+    <p class="lead">这节的逻辑是"白天把睡眠压力攒够"。攒不够晚上就睡不着——这也是为什么下午那杯咖啡会让你晚上难熬。</p>
+
+    <h3>咖啡因在睡前 6–8 小时截止</h3>
+    <div class="spec">0 点睡 → 最晚 14:00–16:00 喝完</div>
+    <p>半衰期平均 4–6 小时，但个体差异极大，慢代谢基因型可达 9–11 小时。关键是别只算咖啡：<b>奶茶、可乐、浓茶、能量饮料、黑巧克力、某些止痛药</b>都含咖啡因。400 mg 约等于 2–3 杯美式。</p>
+    <div class="ev" data-for="d1">
+      <b>研究怎么说：</b>Drake 等（<i>Journal of Clinical Sleep Medicine</i>, 2013）让受试者在睡前 0 / 3 / 6 小时各摄入 400 mg 咖啡因，用家用多导睡眠仪客观监测：<b>6 小时前摄入仍使总睡眠时间减少 1 小时以上，而受试者主观上感觉不到自己睡差了</b>。机制是咖啡因作为腺苷受体拮抗剂把睡眠压力"按住"。代谢速度受 CYP1A2 基因变异影响，也受吸烟、避孕药、口服激素、孕期影响。
+    </div>
+    <button class="evtog" data-t="d1">展开依据</button>
+
+    <div class="note">
+      <b>判断自己是不是慢代谢型：</b>下午 3 点喝一杯咖啡，如果 5–6 点还明显心慌、入睡困难，说明代谢慢，截止时间要往前挪到上午。
+    </div>
+
+    <h3>白天不补觉</h3>
+    <div class="spec">≤20 分钟 · 下午 3 点后禁止</div>
+    <p>白天短暂休息能提升警觉性，但超过 20 分钟会进深睡，醒来必然更糊，还削掉今晚的睡眠压力。真困了才打盹，20 分钟硬上限。</p>
+    <p>白天可以留 10 分钟"发呆时间"当减压阀，那没问题；<b>主动补觉不行</b>。</p>
+    <div class="ev" data-for="d3">
+      <b>研究怎么说：</b>短午睡（&lt;30 分钟）可提升警觉性且通常不干扰夜间睡眠，但长午睡或傍晚午睡会降低夜间睡眠效率、削弱深睡。CBT-I 的刺激控制规则明确写入"白天不补觉"，因为它直接消耗睡眠压力。
+    </div>
+    <button class="evtog" data-t="d3">展开依据</button>
+
+    <div class="two">
+      <div class="pnl y">
+        <h4>建议</h4>
+        <ul>
+          <li>白天多撑一会儿，把睡眠压力攒足</li>
+          <li>咖啡只在上午和中午喝，喝完继续干活</li>
+          <li>把咖啡当工具，不当放松仪式</li>
+        </ul>
+      </div>
+      <div class="pnl n">
+        <h4>避免</h4>
+        <ul>
+          <li>下午三点后再补觉或赖床</li>
+          <li>用酒精助眠（见下一节）</li>
+          <li>周末睡到中午试图"补回来"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 04 ========== -->
+<section id="evening">
+  <div class="wrap">
+    <div class="sec-n">04 / 睡前</div>
+    <h2>睡前三小时到躺下</h2>
+    <p class="lead">从吃完晚饭到关灯，这段是给身体降温和收尾的时间：核心体温要降、褪黑素要起来、屏幕刺激要撤掉。</p>
+
+    <h3>晚餐离上床 4–6 小时</h3>
+    <div class="spec amb">最优 4–6 小时 · 最低 2–3 小时</div>
+    <p>这是全套里最反直觉的一条：<b>晚餐要吃得早，不是吃得饱</b>。23 点睡，晚餐就安排在 17–19 点。</p>
+    <p>躺下时胃里还有东西，会发生两件事：胃酸反流（平躺失去了重力优势），以及核心体温被消化过程顶住——而入睡恰恰需要核心体温下降。如果确实有反流，临床指南要求睡前 4 小时不进食。</p>
+    <div class="ev" data-for="e1">
+      <b>研究怎么说：</b>Fujiwara 等（<i>American Journal of Gastroenterology</i>, 2005）配对病例对照研究，147 例 GERD 与 294 名对照：晚餐距躺下 &lt;3 小时者优势比达 <b>7.45</b>（已调整吸烟、饮酒、BMI）。美国时间使用数据分析显示，睡眠时长最优的进食间隔是 4–6 小时。Chung 等（2020, n=793）发现晚餐距睡 &lt;3 小时主要增加<b>夜间觉醒</b>（OR 1.61），对入睡延迟无显著影响。另一项研究显示晚间进食会升高 24 小时核心体温。
+    </div>
+    <button class="evtog" data-t="e1">展开依据</button>
+
+    <h3>睡前 1–2 小时洗个温水澡</h3>
+    <div class="spec">温水，不是热水</div>
+    <p>泡澡或淋浴时体温上升，出浴后身体开始加速散热，这个"先升后降"的落差会触发睡意。特别适合脑子停不下来的人。</p>
+    <div class="ev" data-for="e2">
+      <b>研究怎么说：</b>入睡前 1–2 小时的温水浴使入睡潜伏期缩短、总睡眠时间增加、主观睡眠质量改善，主要机制是浴后外周血管扩张带来的核心体温下降加速。
+    </div>
+    <button class="evtog" data-t="e2">展开依据</button>
+
+    <h3>不靠酒精助眠</h3>
+    <div class="spec">临界量 ≈0.5 g/kg 体重（约 2 杯）</div>
+    <p>酒精确实能让入睡时间缩短，但代价在半夜：<b>REM 睡眠被显著压缩</b>、代谢后产生"清醒反弹"、加重上气道阻力（把不打鼾的人变成打鼾者，甚至诱发呼吸暂停）。</p>
+    <p>而且别被"小酌助眠"骗了——<b>约 2 杯标准酒精量就足以开始削减 REM 睡眠</b>，且存在剂量-反应关系。</p>
+    <div class="ev" data-for="e3">
+      <b>研究怎么说：</b>系统综述与 Meta 分析（27 项研究）发现，低剂量酒精（≤0.5 g/kg）即显著延迟 REM 起始并缩短 REM 时长，只有高剂量（≥0.85 g/kg）才观察到入睡延迟缩短，但会加重后续的 REM 破坏。McCullar 等（<i>Sleep</i>, 2024, n=30，实验室多导睡眠监测，交叉设计）证实连续三晚睡前饮酒使慢波睡眠累积速率上升、REM 累积速率与总量显著下降。酒精还会抑制呼吸、加重脱水与夜尿、增加后半夜觉醒。
+    </div>
+    <button class="evtog" data-t="e3">展开依据</button>
+
+    <h3>睡前 30–60 分钟戒屏幕</h3>
+    <div class="spec">睡前 30–60 分钟 · 关通知 · 调暗</div>
+    <p>这是全套里证据最硬的一条，但作用机制和多数人想的不一样：<b>伤害主要来自"刷了多久"和"看的是什么"，不是蓝光的波长</b>。</p>
+    <p>所以最有效的动作是把手机拿出卧室，而不是买防蓝光眼镜。同时把屏幕亮度和房间灯一起调暗——<b>亮度比颜色重要得多</b>，调暗比调暖更管用。顺手关掉通知。</p>
+    <div class="ev" data-for="e4">
+      <b>研究怎么说：</b>挪威公共卫生研究所队列研究（<i>Frontiers in Psychiatry</i>, 2025, n=45,202，18–28 岁）：<b>睡前 1 小时每增加 1 小时屏幕使用，失眠风险升高 59%，平均睡眠时长减少 24 分钟</b>；且各类型活动影响相似，说明关键变量是总时长而非内容类型。关于蓝光本身：手机屏幕约 40 lux，阴天户外约 10,000 lux，相差约 250 倍。<i>Current Biology</i> 研究显示屏幕亮度对昼夜节律的影响大于颜色。2023 Cochrane 综述（17 项 RCT）结论：蓝光过滤镜片对睡眠质量证据不定、对视觉疲劳无明确效果。
+    </div>
+    <button class="evtog" data-t="e4">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 05 ========== -->
+<section id="env">
+  <div class="wrap">
+    <div class="sec-n">05 / 环境</div>
+    <h2>卧室：黑、冷、静</h2>
+    <p class="lead">这节基本不需要花钱，但效果立竿见影。多数人的卧室光和温度都远超舒适阈值。</p>
+
+    <h3>全黑：关灯不等于全黑</h3>
+    <div class="spec">目标 &lt;1 lux · 物理遮挡</div>
+    <p>门缝漏光、床头灯、路由器指示灯、充电器 LED、手机息屏——<b>5 lux 的微光就足以扰动褪黑素分泌</b>，而多数卧室远不止这个亮度。</p>
+    <p>物理遮挡比眼罩更根本：门缝贴胶条、上遮光帘、盖住所有指示灯。</p>
+    <div class="ev" data-for="v1">
+      <b>研究怎么说：</b>松果体对光极度敏感，<b>常规室内光照即可抑制褪黑素分泌 50% 以上</b>（Gooley 等, 2011）；夜间光照抑制褪黑素呈剂量依赖关系。Lockley 等（2003）测得 460 nm 蓝光抑制褪黑素的效率约为 555 nm 黄光的 2 倍。
+    </div>
+    <button class="evtog" data-t="v1">展开依据</button>
+
+    <h3>温度 16–19°C</h3>
+    <div class="spec">16–19°C · 空调别设太低</div>
+    <p>入睡依赖核心体温下降，而能不能降下来取决于环境。温度偏高会同时延长入睡时间并<b>压缩 REM 睡眠</b>——REM 期身体几乎无法通过出汗或发抖调节体温，对环境温度最敏感。</p>
+    <p>女性和老年人对高温更敏感；老人最佳区间偏高一些，约 20–25°C。</p>
+    <div class="ev" data-for="v2">
+      <b>研究怎么说：</b>美国国家睡眠基金会建议 15.5–19.4°C，AASM 睡眠环境指南约 18.3°C，哈佛建议 18.3–20°C。覆盖 68 国、47,000 余人、700 万条睡眠记录的分析显示，夜间温度超过 30°C 时平均睡眠时长减少 14 分钟以上，25→30°C 区间睡眠效率下降 5–10%。辛达与亚瑟·马库斯老年研究所对 50 名 65+ 老人监测 11,000 个夜晚发现，老人最佳区间为 20–25°C，20°C 时有效睡眠时长达峰、翻身最少。
+    </div>
+    <button class="evtog" data-t="v2">展开依据</button>
+
+    <h3>静：安静 + 降噪</h3>
+    <div class="spec">遮蔽突发噪声</div>
+    <p>突发噪声（门响、快递、伴侣打鼾）会直接导致觉醒。持续低频噪声（空调、交通）影响相对较小。必要时用白噪音或耳塞。</p>
+    <div class="ev" data-for="v3">
+      <b>研究怎么说：</b>睡眠实验室研究显示周期性短噪声（火车声、关门声）会引起显著睡眠微觉醒，而稳定的环境背景噪声影响较小。持续噪声主要影响主观睡眠质量评价。
+    </div>
+    <button class="evtog" data-t="v3">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 06 ========== -->
+<section id="awake">
+  <div class="wrap">
+    <div class="sec-n">06 / 关键技巧</div>
+    <h2>躺着睡不着怎么办</h2>
+    <p class="lead">这是整套方案里最重要也最难执行的一条，也是长期失眠最有效的单项干预——CBT-I 治疗体系中的「刺激控制」。</p>
+
+    <div class="card t">
+      <div class="card-h">规则：躺下约 20 分钟没睡着，就离开床</div>
+      <ol>
+        <li>离开床，到<b>昏暗</b>的房间做无聊的事。读纸质书、折衣服、写清单、听舒缓音乐都可以。</li>
+        <li><b>不要看钟</b>，别用手机计时。躺了 20 分钟没睡意的印象，在事后回忆里普遍被高估。</li>
+        <li><b>不要在床上工作、吃饭、看剧、玩手机。</b>床只用来睡觉，这是重塑关联的关键。</li>
+        <li>困了再回床上。反复失眠就重复这个循环。</li>
+        <li><b>不管几点，都用固定起床时间</b>，第二天不补觉。</li>
+      </ol>
+    </div>
+
+    <div class="note">
+      <b>为什么这么难？</b>因为硬躺是在训练大脑把床和「清醒 + 焦虑」绑定。你越躺越烦，床就越让人有压力。离床的真正目的不是"睡得更多"，而是<b>把床重新变回一个让人困的地方</b>。执行 2–4 周才会见效，前几天会更难熬。
+    </div>
+
+    <h3>焦虑涌上来时：生理叹息</h3>
+    <p>这是当下证据最硬的一次性降压手法，也最容易上手：<b>连续两次短吸气（第二次补一小口），然后一次长而缓慢的呼气，重复 5 轮左右。</b>关键是呼气要长于吸气。</p>
+    <p>也可以用 4-7-8 呼吸（吸 4 秒、屏息 7 秒、呼 8 秒）重复 4–6 轮。机制一样：长呼气激活迷走神经、提高心率变异性、抑制皮质醇分泌，让交感神经降下来。两种任选，选不憋气的那个更容易坚持。</p>
+    <div class="ev" data-for="a1">
+      <b>研究怎么说：</b>慢呼吸（约 5–6 次/分）是最可靠的自主神经调节手段，能在 10–15 分钟内降低循环皮质醇。Tsai 等（<i>Psychophysiology</i>, 2015）让失眠患者睡前做 20 分钟 6 次/分慢速呼吸训练，相比自身基线入睡更快、觉醒更少、夜间清醒时间更短。Laborde 等（2019）补充：睡前慢速呼吸可增加夜间心脏迷走活动，改善主观与客观睡眠指标。
+    </div>
+    <button class="evtog" data-t="a1">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 07 ========== -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-n">07 / 节奏</div>
+    <h2>怎么开始：四周推进</h2>
+    <p class="lead">别一次全上。前两周只做三件事，第三周起再加工环境。顺序对了，第二周的体感就会明显不一样。</p>
+
+    <h4>第 1 周 · 只做锚点</h4>
+    <p>每天同一时刻起床，误差不超过 30 分钟，不管前一晚睡得如何。建议写进日程当硬约定。其他一律先不动。</p>
+
+    <h4>第 2 周 · 加上晨光与咖啡因截止线</h4>
+    <p>起床 1 小时内出门见光 10–20 分钟；咖啡因截止设在睡前 6–8 小时。这两条一上，通常第 3–7 天就能感觉到入睡变快。</p>
+
+    <h4>第 3 周 · 加上刺激控制与卧室环境</h4>
+    <p>开始执行「20 分钟离床」。同时把温度压到 16–19°C、遮光做到全黑。两周下来如果有效，睡眠效率（睡着时长 ÷ 卧床时长）应达到 85% 以上。</p>
+
+    <h4>第 4 周 · 按睡眠效率校准</h4>
+    <p>如果你属于"躺很久却睡不实"，光靠上面几条不够，需要做<b>睡眠窗口压缩</b>：先把卧床时间压到接近实际睡得着的水平，逼出睡眠效率，再每周往回加 15 分钟。窗口下限 5.5 小时，不会更低。周末同样用固定起床时间。</p>
+
+    <div class="note teal">
+      <b>评估节点：</b>连续执行 2–4 周后再判断有没有用，而不是三天。刺激控制和睡眠限制法的标准疗程就是 2–4 周，第一周往往更难受——白天犯困是正常的。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 08 ========== -->
+<section id="when">
+  <div class="wrap">
+    <div class="sec-n">08 / 边界</div>
+    <h2>这几种情况，别用作息表硬扛</h2>
+    <p class="lead">习惯调整对慢性失眠确实有效，但有几种情况它是处理不了的，需要专业检查。</p>
+
+    <div class="card r">
+      <div class="card-h" style="color:var(--red)">出现以下任一情况，请及时就医</div>
+      <ul>
+        <li><b>打鼾很响，且被观察到呼吸暂停</b>——可能是睡眠呼吸暂停。典型表现是白天怎么睡都不解乏、晨起头痛口干。这套作息表完全处理不了，需要做多导睡眠监测。</li>
+        <li><b>白天困到开会都能睡着</b>——严重的日间嗜睡是独立疾病信号，不是"作息不好"。需要排查睡眠呼吸暂停、发作性睡病等。</li>
+        <li><b>腿难受、想动才能缓解</b>——可能是不宁腿综合征（RLS）。它会直接切断睡眠，是失眠里最容易被漏掉的一类，靠习惯调整基本无效。</li>
+        <li><b>入睡极度困难，明明很累</b>——常见于焦虑抑郁相关的入睡障碍。放松类技巧对这类效果有限，需要针对焦虑本身处理。</li>
+      </ul>
+    </div>
+
+    <div class="note teal">
+      <b>持续时间比症状更重要：</b>失眠每周 ≥3 晚、持续 ≥3 个月，已经符合慢性失眠诊断标准。此时 <b>CBT-I 是一线推荐治疗</b>——疗效优于安眠药，且无依赖风险。很多地区已有数字化 CBT-I，比跑医院便宜得多。药物只在需要时短期使用，不要自己长期吃。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 09 ========== -->
+<section id="refs">
+  <div class="wrap">
+    <div class="sec-n">09 / 来源</div>
+    <h2>参考依据与来源</h2>
+    <p class="lead">上文每条建议的展开依据都对应下面这些原始研究与临床指南。点击依据段落末尾的蓝色编号可跳转到对应条目。</p>
+
+    <h3>临床指南与共识</h3>
+    <div class="reflist">
+      <div class="ref" id="r1"><span class="id">R1</span><div><b>American Academy of Sleep Medicine (AASM)</b> — 失眠行为治疗临床实践指南。CBT-I 的一线治疗地位，以及固定起床时间、刺激控制、睡眠限制三项核心技术的规范表述。美国退伍军人事务部（VA）失眠教育材料同样将其列为标准疗法。</div></div>
+      <div class="ref" id="r2"><span class="id">R2</span><div><b>NSF / AASM 睡眠环境建议</b> — 卧室温度 15.5–19.4°C（AASM 约 18.3°C，哈佛 18.3–20°C）；卧室应"凉爽、黑暗、安静"。<b>Cochrane Database of Systematic Reviews</b>, 2023, Issue 8, CD013244（Singh S, et al.，17 项 RCT）：蓝光过滤镜片对睡眠质量证据不定、对视觉疲劳无明确效果。</div></div>
+    </div>
+
+    <h3>咖啡因</h3>
+    <div class="reflist">
+      <div class="ref" id="r4"><span class="id">R4</span><div><b>Drake C, Roehrs T, Shambroom J, Roth T.</b> Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. <i>Journal of Clinical Sleep Medicine</i>, 2013. — 400 mg 咖啡因在睡前 6 小时摄入仍使总睡眠时间减少 1 小时以上，且受试者主观无感知。</div></div>
+      <div class="ref" id="r5"><span class="id">R5</span><div><b>McLellan KR, et al.</b> Caffeine: revisited. <i>Sleep Health</i>, 2016. — 咖啡因作为腺苷受体拮抗剂压制睡眠压力；CYP1A2 基因多态性导致代谢半衰期在 3–11 小时之间大幅波动，亦受吸烟、避孕药、口服激素、孕期影响。</div></div>
+    </div>
+
+    <h3>酒精与睡眠结构</h3>
+    <div class="reflist">
+      <div class="ref" id="r6"><span class="id">R6</span><div><b>Gardiner C, et al.</b> 系统综述与 Meta 分析（27 项研究）。— 低剂量酒精（≤0.5 g/kg 体重，约 2 标准杯）即显著延迟 REM 起始并缩短 REM 时长，存在剂量-反应关系；仅高剂量（≥0.85 g/kg）才观察到入睡延迟缩短，但会加重后续 REM 破坏。</div></div>
+      <div class="ref" id="r7"><span class="id">R7</span><div><b>McCullar KA, et al.</b> Altered sleep architecture following consecutive nights of presleep alcohol. <i>Sleep</i>, 2024, 47(4):zsae003. — n=30，实验室多导睡眠监测，交叉设计，连续三晚睡前饮酒。慢波睡眠累积速率上升，REM 累积速率与总量显著下降。</div></div>
+    </div>
+
+    <h3>光照与昼夜节律</h3>
+    <div class="reflist">
+      <div class="ref" id="r8"><span class="id">R8</span><div><b>Gooley JJ, et al.</b> Disruption of sleep in the presence of ambient light. 相关研究发表于 <i>Journal of Clinical Sleep Medicine</i>, 2011. — 睡眠时段内常规室内光照即可抑制褪黑素分泌 50% 以上；5 lux 微光已足以产生可测量的生物效应。</div></div>
+      <div class="ref" id="r9"><span class="id">R9</span><div><b>Lockley SW, et al.</b> (2003)；<b>Khalsa SBS, et al.</b> 人体相位反应曲线综述。 — 460 nm 蓝光抑制褪黑素效率约为 555 nm 黄光的 2 倍；晨光致相位提前、傍晚及晚间光照致相位延迟。</div></div>
+      <div class="ref" id="r10"><span class="id">R10</span><div><b>光疗 Meta 分析（轮班工人）</b> 及失眠人群光疗研究。 — 光疗使总睡眠时间增加 30 分钟以上、睡眠效率提高约 3%；另有研究显示 30 分钟晨光可达到 2 小时方案约 75% 的纠偏效果。临床标准为 10,000 lux、20–30 分钟、位置略高于视线、不直视。</div></div>
+    </div>
+
+    <h3>屏幕时间与蓝光</h3>
+    <div class="reflist">
+      <div class="ref" id="r11"><span class="id">R11</span><div><b>挪威公共卫生研究所队列研究</b>（n=45,202，18–28 岁），发表于 <i>Frontiers in Psychiatry</i>, 2025。— 睡前 1 小时每增加 1 小时屏幕使用，失眠风险 +59%，平均睡眠时长 −24 分钟；所有类型的屏幕活动影响相似，说明关键变量是总时长而非内容类型。</div></div>
+      <div class="ref" id="r12"><span class="id">R12</span><div><b><i>Current Biology</i>（2020）关于亮度与波长相对作用的研究</b>；<b>Chang AM, et al.</b> <i>PNAS</i>, 2015, PMID 25535358（夜间使用发光电子书设备的褪黑素抑制实验）。— 手机屏幕约 40 lux，阴天户外约 10,000 lux，相差约 250 倍；屏幕亮度对昼夜节律的影响大于颜色。</div></div>
+    </div>
+
+    <h3>饮食与睡眠</h3>
+    <div class="reflist">
+      <div class="ref" id="r13"><span class="id">R13</span><div><b>Fujiwara Y, et al.</b> 晚餐与躺下的间隔与胃食管反流。<i>American Journal of Gastroenterology</i>, 2005. — 配对病例对照，147 例 GERD / 294 名对照，间隔 &lt;3 小时者优势比 7.45（已调整吸烟、饮酒、BMI）。</div></div>
+      <div class="ref" id="r14"><span class="id">R14</span><div><b>Chung S, et al.</b> <i>International Journal of Environmental Research and Public Health</i>, 2020, n=793；<b>美国时间使用数据分析</b>。 — 晚餐距睡 &lt;3 小时主要增加夜间觉醒（OR 1.61），对入睡延迟无显著影响；睡眠时长最优的进食间隔为 4–6 小时；晚间进食升高 24 小时核心体温，而入睡依赖核心体温下降。</div></div>
+    </div>
+
+    <h3>环境温度</h3>
+    <div class="reflist">
+      <div class="ref" id="r15"><span class="id">R15</span><div><b>覆盖 68 国、47,000+ 名成人、700 万条睡眠记录的大样本研究</b>，发表于 <i>Sleep</i>, 2026。— 夜间温度超过 30°C 时平均睡眠时长减少 14 分钟以上；25→30°C 区间睡眠效率下降 5–10%；女性与老年人对夜间升温的反应更明显，负担不起空调者受影响更大。</div></div>
+      <div class="ref" id="r16"><span class="id">R16</span><div><b>辛达与亚瑟·马库斯老年研究所睡眠监测研究</b> — 50 名 65 岁以上老人、11,000 个夜晚、历时一年半。老人卧室温度 20–25°C 时睡眠质量最佳，20°C 时有效睡眠时长达峰、翻身次数最少；温热寝具使老人更快入睡、睡眠效率提高约 5%。</div></div>
+    </div>
+
+    <h3>呼吸与自主神经调节</h3>
+    <div class="reflist">
+      <div class="ref" id="r17"><span class="id">R17</span><div><b>Tsai MJ, et al.</b> 睡前慢速呼吸训练对失眠的影响。<i>Psychophysiology</i>, 2015. — 6 次/分、20 分钟/晚，相比自身基线入睡更快、觉醒更少、夜间清醒时间更短。</div></div>
+      <div class="ref" id="r18"><span class="id">R18</span><div><b>Laborde S, et al.</b> <i>Psychophysiology</i>, 2019. — 睡前慢速呼吸增加夜间心脏迷走活动，改善主观与客观睡眠指标。慢呼吸（约 5–6 次/分）可于 10–15 分钟内降低循环皮质醇水平。</div></div>
+    </div>
+
+    <h3>睡眠规律性与社交时差</h3>
+    <div class="reflist">
+      <div class="ref" id="r19"><span class="id">R19</span><div><b>Fasso P, et al.</b>（亚利桑那大学，n=984）社交时差与心血管疾病风险，<i>Sleep</i>, 2017. — 社交时差每增加 1 小时，心血管疾病风险 +11%。</div></div>
+      <div class="ref" id="r20"><span class="id">R20</span><div><b>ELSA-Brasil 研究（n=1,832）</b> Weekend sleep extension, social jetlag, and incidence of coronary calcium score. <i>Sleep</i>, 2025. — 周末补觉 &gt;90 分钟者 5 年冠脉钙化新发率 19.1%，≤90 分钟者为 31.7%（OR 0.62）。提示问题在"时差"而非"补觉"本身；分层分析显示这一获益主要存在于睡眠时长 ≤6.55 小时者。</div></div>
+      <div class="ref" id="r21"><span class="id">R21</span><div><b>Chaput JP, et al.</b> Sleep timing, sleep consistency, and health in adults: a systematic review. <i>Applied Physiology Nutrition and Metabolism</i>, 2020, 45(10):S232–S247. — 41 篇研究、92,340 名受试者。结论：就寝时间较早、睡眠时间规律者健康结局更好；就寝较晚与睡眠时间波动大者与较差健康结局相关。周末补觉本身与较好健康结局相关，而社交时差与不良结局相关。</div></div>
+    </div>
+
+    <h3>晨起补水</h3>
+    <div class="reflist">
+      <div class="ref" id="r22"><span class="id">R22</span><div><b><i>Journal of Nutrition</i>（2011）轻度脱水研究</b> — 约 1.5% 体重脱水使情绪显著恶化、任务难度感知上升、注意力下降、头痛频率增加。<b><i>Medicine &amp; Science in Sports &amp; Exercise</i>（2010）</b> — 2% 脱水使有氧运动表现下降约 20%。</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>内容基于截至 2026 年 10 月的公开研究与临床指南整理。文中每条建议的展开依据均可在「依据来源」中定位到原始文献。</p>
+    <p style="margin-top:12px">本页用于自我调整与科普参考，<b>不能替代医生诊断</b>。若存在以下情况请及时就医：每周 ≥3 晚失眠持续 ≥3 个月（符合慢性失眠诊断标准）、响亮打鼾伴呼吸暂停、白天严重嗜睡、腿部不适需活动才缓解。CBT-I 是慢性失眠的一线推荐治疗，可通过睡眠专科或临床心理科获取。</p>
+    <a class="repo" href="https://github.com/isnotry/sleep-guide" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 · Open source on GitHub</a>
+  </div>
+</footer>
+
+<script>
+var MAP={
+  m0:'r21',m1:'r10',m2:'r22',
+  d1:'r4',d3:'r1',
+  e1:'r13',e2:null,e3:'r6',e4:'r11',
+  v1:'r8',v2:'r15',v3:null,
+  a1:'r17'
+};
+
+[].slice.call(document.querySelectorAll('.evtog')).forEach(function(b){
+  b.addEventListener('click',function(){
+    var box=document.querySelector('.ev[data-for="'+b.dataset.t+'"]');
+    if(!box)return;
+    var on=box.classList.toggle('on');
+    b.textContent=on?'收起依据':'展开依据';
+  });
+});
+
+[].slice.call(document.querySelectorAll('.ev')).forEach(function(box){
+  var id=MAP[box.dataset.for];
+  if(!id)return;
+  var tag=document.createElement('span');
+  tag.className='evref';tag.textContent=id.toUpperCase()+' ↗';
+  tag.addEventListener('click',function(){
+    var t=document.getElementById(id);
+    if(!t)return;
+    t.scrollIntoView({behavior:'smooth',block:'center'});
+    t.classList.add('hit');
+    setTimeout(function(){t.classList.remove('hit')},1800);
+  });
+  box.appendChild(tag);
+});
+
+var secs=[].slice.call(document.querySelectorAll('section'));
+var links=[].slice.call(document.querySelectorAll('nav a'));
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+130,cur=0;
+  secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+  links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+});
+</script>
+</body>
+</html>
