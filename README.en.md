@@ -1,153 +1,148 @@
-# Sleep Guide · 睡眠修复指南
+# Life Guide · 生活指南
 
 [简体中文](README.md) | **English**
 
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
-![No build step](https://img.shields.io/badge/build-none-blue)
-![Single file](https://img.shields.io/badge/web-1%20file-lightgrey)
-![Data stays local](https://img.shields.io/badge/data-local--only-orange)
+![No build](https://img.shields.io/badge/build-none-blue)
+![Four pages](https://img.shields.io/badge/web-4%20pages-lightgrey)
+![Local-only data](https://img.shields.io/badge/data-local--only-orange)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
-> Sleep broken down into what to do at each hour of the day — 21 numbered sources and 13 expandable evidence notes, in one file, with no dependencies and no network calls.
+> Three practical guides to diet, exercise and sleep: turn daily decisions into concrete actions and numbers, with expandable evidence for key claims.
 
-![Screenshot](https://cdn.jsdelivr.net/gh/isnotry/sleep-guide@main/docs/screenshot.png)
+![Life Guide home page screenshot (Chinese UI)](https://cdn.jsdelivr.net/gh/isnotry/life-guide@main/docs/screenshot.png)
 
-**[Live demo](https://kingsir.work/sleep-guide/)**
+**[Open it online](https://kingsir.work/life-guide/)**
 
 ---
 
 ## What it is
 
-A sleep-repair guide **organized by time of day**, not a list of vague advice like "go to bed earlier, exercise more". From the moment you get up to the moment you turn off the light, each step is one concrete action with its numeric spec attached: how many hours, how many lux, how many degrees.
+Life Guide is a static four-page site: a home page plus three topic guides for diet, exercise and sleep. Each guide follows a day's timeline and turns "what should I do" into specific numbers, actions and boundary conditions.
 
-The whole thing is **a single `index.html`**: markup, styles and interactions are all inline, 41 KB, no npm, no framework, no backend — double-click and it opens.
-
-Nine sections, 13 expandable evidence notes, 21 numbered sources (R1–R22, R3 is vacant). Every recommendation links back to its original study or clinical guideline, and the numbers were corrected against the research rather than recalled from memory.
-
-The page makes **zero network requests** — it reads nothing but itself.
-
-Note: the interface is written in Chinese; this README is the English companion to that page. The screenshot above shows the actual Chinese UI.
+All four pages are standalone single-file HTML documents with inline styles and scripts. There is no build step and no external runtime request; open `index.html` and read offline.
 
 ## Features
 
-- **A two-engine framework** — sleep onset needs both the circadian phase and the sleep pressure; everything else is built on that split
-- **Nine sections in order of the day** — principle / morning / daytime / before bed / environment / can't sleep / four-week plan / when to see a doctor / sources
-- **A numeric spec on every recommendation** — 30-minute window, 10,000 lux, 6–8 hours before bed, 16–19°C, all written as values you can check
-- **Evidence you can expand** — 13 "show the evidence" buttons, 11 of them carrying a numbered badge that smooth-scrolls to the reference and highlights it for 1.8 seconds
-- **Counter-intuitive findings called out** — blue light is not the main problem, "a little alcohol helps me sleep" costs you REM in the second half of the night, weekend catch-up sleep is about jet lag rather than the extra hours
-- **Stimulus control in full** — the five steps of leaving the bed after 20 minutes awake, and why it is so hard to do
-- **A four-week ramp, not everything at once** — week 1 is only the anchor, week 3 adds the environment, week 4 calibrates by sleep efficiency
-- **Red lines in plain sight** — loud snoring with observed apnoea, daytime sleepiness, restless legs, severe difficulty falling asleep: four cases that point straight to a clinic
-- **Dark by design** — the page stays dark and does not follow the system theme
-- **No dependencies, no build** — no web fonts, no icon library, no CDN; offline it renders exactly the same
+- **One entry, three topics** —— the home page orders three topic cards as diet, exercise and sleep, each with a one-line claim and its key numbers.
+- **Built around a day** —— suggestions land on real time points, from breakfast, lunch and afternoon snacks to workout windows, caffeine cutoff and the bedtime environment.
+- **Numbers for every recommendation** —— protein grams, plate proportions, weekly exercise minutes, step ranges, sleep duration and bedroom temperature all come with practical ranges.
+- **Expandable, traceable evidence** —— 39 "What the research says" blocks expand in place, and 50 numbered sources are listed at the end; clicking an R badge jumps to and highlights the source.
+- **Topics link to each other** —— persistent top navigation plus a "Read next" block at the end of each guide; from any topic you can reach the other two.
+- **Boundaries, not absolute promises** —— sharp pain, dizziness and persistent insomnia are flagged with stop-or-seek-care guidance, and observational associations are kept separate from causal claims.
+- **Four-week plans** —— each topic has a four-week schedule that starts at the lower bound and adds dose gradually.
+- **Dark reading layout** —— 720px text width, sticky section navigation, timelines and two-column cards keep long pages scannable.
+- **Recognizable icons and state** —— three inline SVG line icons represent diet, exercise and sleep; the current topic is highlighted in navigation.
+- **Zero dependencies, zero upload** —— no backend, no account, no analytics; reading behaviour stays on your device.
 
 ## Quick start
 
 ### Use it online
 
-Click **[Live demo](https://kingsir.work/sleep-guide/)** to open it — nothing to install, no sign-up.
+Click **[Open it online](https://kingsir.work/life-guide/)** to start reading. No installation or sign-up required.
 
 ### Run it locally
 
 ```bash
+git clone git@github.com:isnotry/life-guide.git
+cd life-guide
 open index.html
 ```
 
-There is no build step; edit and refresh.
+## Topics and key numbers
 
-## Cheat sheet
-
-| Time of day | What to do | Numeric spec |
-|---|---|---|
-| The moment you get up | Rise at a fixed time | Off by no more than 30 minutes |
-| 30–60 min after waking | Go outside for daylight, clouds included | 10,000 lux · 10–20 minutes |
-| Within 1 hour of waking | One glass of warm water | 200–250 ml |
-| Within 2 hours of waking | Breakfast plus the day's physical activity | Exercise ends 3 hours before bed |
-| Daytime | Caffeine cut-off | 6–8 hours before bed (asleep at 00:00 → last cup 14:00–16:00) |
-| Daytime | Nap limit | ≤20 minutes · none after 15:00 |
-| Dinner | Gap before lying down | Ideal 4–6 hours · minimum 2–3 hours |
-| 1–2 hours before bed | A warm bath or shower | Warm, not hot |
-| 30–60 min before bed | Screen cut-off | Phone out of the bedroom, dim the lights, notifications off |
-| 20 minutes awake in bed | Leave the bed, return when sleepy | Repeat; fixed wake time regardless |
-| Bedroom temperature | Air-conditioner set point | 16–19°C (20–25°C for older adults) |
-| Bedroom light level | Physical blocking | Target <1 lux |
+| Topic | Scenario | Number | Why it matters |
+|---|---|---|---|
+| Diet | Breakfast protein | 25–30 g | About one third of the day's protein; do not make it all carbohydrates |
+| Diet | Plate proportions | 1/2 vegetables, 1/4 protein, 1/4 staples | Plate first, then eat; easier than stopping halfway |
+| Diet | Dinner and bedtime | 4–6 hours, at least 3 hours | Leaves time for gastric emptying and reduces reflux |
+| Diet | Daily protein | 0.8–1.2 g/kg, 20–30 g per meal | Total intake and distribution both affect satiety and muscle maintenance |
+| Exercise | Aerobic | 150–300 min/week moderate, or 75–150 min vigorous | Can be accumulated; no need to do it all at once |
+| Exercise | Strength | At least 2 sessions/week | Cover legs, push, pull, hips and core; it cannot replace aerobic work |
+| Exercise | Daily steps | 7,000–8,000 steps/day; 6,000–8,000 for older adults | The step–risk link is observational, not a hard target |
+| Sleep | Fixed wake time | Same time daily, within 30 minutes | Anchor the wake time first, then work on falling asleep |
+| Sleep | Caffeine cutoff | 6–8 hours before bed; by 14:00–16:00 if sleeping at midnight | Half-life varies; sensitive people need an earlier cutoff |
+| Sleep | Bedroom environment | 16–19°C, light below 1 lux | Temperature and light are variables you can physically change |
 
 ## UI reference
 
-| Where | Element | What it does |
+| Location | Element | Purpose |
 |---|---|---|
-| Top | Title block and five spec pills | Adults 7–9 h / fixed wake time / 10,000 lux / caffeine 6 h / 16–19°C |
-| Nav bar | Nine sticky anchors | Highlights the section you are currently reading |
-| Body | Timeline (`tl-item`) | The morning section runs in minutes after waking |
-| Body | "Show the evidence" button | Expands or collapses the research note; label toggles between the two |
-| Body | Blue `R# ↗` badge at the end of a note | Smooth-scrolls to the matching entry under sources and highlights it for 1.8 s |
-| Body | Advice / avoid twin panel | The do-and-don't list in the daytime section |
-| Body | Red card | The four see-a-doctor cases |
-| Footer | "GitHub 开源仓库" text link | Opens this repository in a new tab |
+| Home page | Three topic cards | Ordered diet, exercise, sleep; show icon, one-line claim, key numbers and entry |
+| Topic page top | Topic navigation | Switch among Life Guide, Diet, Exercise and Sleep; current page highlighted |
+| Topic page | Sticky section navigation | Jump by timeline or theme and auto-highlight the current section while scrolling |
+| Body | Number badges, timelines, two-column cards | Break advice into time points, doses and "do / avoid" pairs |
+| Body | "What the research says" button | Expand the study summary, sample size and limitations |
+| End of page | Two "Read next" cards | Jump directly to the other two topics |
+| Footer | GitHub open-source repository | Open the source code and README |
 
-## Interaction
+### Interactions
 
-| Action | Result |
-|---|---|
-| Click "show the evidence" | Expands that research note; click again to collapse |
-| Click the `R# ↗` badge | Scrolls to the reference entry, adds a `hit` class, clears it after 1.8 seconds |
-| Click a nav anchor | Smooth-scrolls to the section (`scroll-behavior: smooth`) |
-| Scroll the page | Uses `scrollY + 130` to decide which nav item is highlighted |
-| What is not there | No keyboard shortcuts, no search box, no forms — this is a reading page |
+| Action | Location | Result |
+|---|---|---|
+| Click or press Enter / Space | "What the research says" button | Expand or collapse the evidence |
+| Click an R badge | Inline evidence badge | Jump to the matching source at the end and highlight it briefly |
+| Click a topic name | Top topic navigation | Open the corresponding topic page |
+| Click a section name | Sticky section navigation | Smooth-scroll to that section |
+| Scroll the article | Sticky section navigation | Auto-highlight the current section |
+| Tab key | Links and buttons across the site | Show focus; press Enter to open a link |
 
-## Content model
+## Reading and execution rules
 
 ```text
-sleep onset = circadian phase aligned ∧ sleep pressure sufficient
-sleep pressure = hours awake × adenosine built up − (caffeine block + naps withdrawn early)
+Start at the lower bound → Hold for two weeks → Add dose → Record the response
 ```
 
-- **Engine one · circadian clock** — the suprachiasmatic nucleus only knows "what time it is"; it is anchored by morning light and a fixed wake time
-- **Engine two · sleep pressure** — adenosine accumulates while you are awake and is cleared by sleep; caffeine blocks the receptors, naps spend the budget early
-- **Three saboteurs** — caffeine, alcohol, and daytime naps with weekend lie-ins; every section is organised around them
-- **How badges are wired** — the `MAP` object in the script has 13 keys, 11 of which point at a real entry; `e2` (warm bath) and `v3` (noise) have no dedicated source, so they expand without a jump
-- **Reference numbering** — 21 entries under R1–R22; R3 is currently vacant and can be filled directly
+- Lower bound first: 150 aerobic minutes per week, 2 strength sessions and 7–9 hours of sleep already produce benefits; less is not "useless", just less beneficial.
+- Add gradually: increase weekly volume by 5–10% or add one set; this is more sustainable than jumping to the upper bound.
+- Boundaries first: stop and seek care for sharp pain, chest tightness, dizziness or palpitations; persistent insomnia at least 3 nights/week for more than 3 months should be treated with CBT-I first.
+- Do not turn observational associations into causal claims: the step and strength-mortality numbers come from cohort studies, not a promise that hitting a number extends life.
+- Judge weight by trend: 0.5–1 kg/week is a common sustainable range; do not expect a straight line.
+- Environment beats willpower: snack visibility, where training gear sits, and bedroom light and temperature are more reliable than on-the-spot discipline.
 
 ## Data & privacy
 
-This page **creates and stores nothing**: no `fetch`, no `localStorage`, no cookies, no analytics; every font and icon comes from the system.
+The pages write nothing to local storage and read no account information. All content ships with the HTML, so reading makes no network requests.
 
-| Item | Status |
+| Item | Actual behaviour |
 |---|---|
-| Network requests | None; the page has no external resources |
-| `localStorage` / `sessionStorage` | Not used |
-| Cookies / analytics | None |
-| Server side | No backend, static hosting only |
-| Offline | Behaves exactly as it does online |
+| localStorage / cookie / IndexedDB | None used |
+| Runtime network requests | None; styles, scripts and icons are all inline |
+| Data upload | None |
+| Analytics | None |
 
 ## Project layout
 
 ```text
-sleep-guide/
-├── index.html            # Markup, inline styles and inline interaction script
+life-guide/
+├── index.html          # Entry page: topic overview and smallest actions
+├── diet.html           # Diet guide: daily food decisions and 15 sources
+├── exercise.html       # Exercise guide: aerobic, strength, steps, recovery and 14 sources
+├── sleep.html          # Sleep guide: daily time points and 21 sources
+├── sitemap.xml         # Sitemap for the four pages
+├── robots.txt          # Crawler rules and sitemap location
 ├── docs/
-│   └── screenshot.png    # README image
-├── LICENSE               # MIT
-├── README.md             # Chinese README
-└── README.en.md          # This file
+│   └── screenshot.png  # Real interface screenshot used by the READMEs
+├── LICENSE             # MIT
+├── README.md           # Chinese README
+└── README.en.md        # This English README
 ```
 
 ## Development notes
 
-- Styles, structure and script all live in `index.html`: `<style>` at the top, `<section>` blocks in the middle, `<script>` at the bottom. Edit and refresh.
-- To add an evidence note you touch three places: `class="ev" data-for="<key>"` on the note, a `<button class="evtog" data-t="<key>">` below it, and `<key>: 'r<number>'` in `MAP` (use `null` for no jump).
-- To add a reference, drop `<div class="ref" id="r<number>">` into the right group under sources — the `id` is what the badge scrolls to.
-- If you reorder sections, update the nav too: the nine `<a href="#...">` entries map one-to-one to the `section` `id`s.
-- Change a number and change the evidence with it — the footer states the content is based on public research up to October 2026, and the spec has to match its source.
-- The footer link points at the upstream repository; if you fork it, swap that `href` for your own.
+- Each page inlines its own styles and scripts; when changing visual tokens, update all four files so topic pages and the home page stay in sync.
+- The topic order is fixed as diet, exercise, sleep: home cards, top navigation, in-page "Read next" and footer links all follow it.
+- When adding or removing a section, update that page's sticky navigation, scroll-spy and `sitemap.xml`.
+- When adding evidence, add an `.ev` summary and an `.evref` badge in the body, then add the matching entry under `#refs`; do not skip or duplicate numbers.
+- When changing the site URL or repository name, update canonical, Open Graph, JSON-LD, footer repository links and `sitemap.xml` on all four pages.
+- Retake the screenshot after any UI change; both READMEs reference the same image.
 
 ## Browser support
 
-- Modern Chrome / Edge / Firefox / Safari all work; IE is not supported.
-- Required capabilities: `scroll-behavior: smooth`, `scrollIntoView({behavior:'smooth'})`, `classList.toggle`, `backdrop-filter` (the frosted nav bar).
-- Without `backdrop-filter` the nav bar falls back to a solid background and everything else still works.
-- Below 640 px the title and the twin panels collapse to one column; the timeline and evidence toggles behave the same.
-- The page is dark by design and does not follow the system theme.
+- Current Chrome, Edge, Safari and Firefox are supported; the pages rely on CSS variables, Grid, `position: sticky` and `IntersectionObserver`.
+- `backdrop-filter` is unavailable in a few older versions; the navigation keeps a readable background and functionality is unaffected.
+- Pages open directly through `file://`; all cross-page links are relative, so the folder can be moved anywhere.
+- Internet Explorer is not supported. With JavaScript disabled, evidence expansion and scroll highlighting stop working, but the article remains readable.
 
 ## License
 

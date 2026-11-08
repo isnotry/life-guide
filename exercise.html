@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>体能是按剂量攒出来的 · 锻炼指南 · 生活指南</title>
+<meta name="description" content="把运动拆成一周里的几份剂量：有氧、力量、日常步数、久坐打断与恢复。每条建议都有数字口径，关键结论附可展开的研究依据。">
+<meta name="keywords" content="锻炼指南, 有氧运动, 力量训练, 步数, 久坐, 运动恢复, 生活指南">
+<meta name="author" content="kingsir">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kingsir.work/life-guide/exercise.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="生活指南 · Life Guide">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="体能是按剂量攒出来的 · 锻炼指南">
+<meta property="og:description" content="把运动拆成一周里的几份剂量：有氧、力量、日常步数、久坐打断与恢复。每条建议都有数字口径与依据。">
+<meta property="og:url" content="https://kingsir.work/life-guide/exercise.html">
+<meta property="og:image" content="https://img.kingsir.work/i/20261108/project-lifeguide.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="生活指南项目封面：指南针图标与饮食、锻炼、睡眠三份生活指南">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="体能是按剂量攒出来的 · 锻炼指南">
+<meta name="twitter:description" content="把运动拆成一周里的几份剂量：有氧、力量、日常步数、久坐打断与恢复。">
+<meta name="twitter:image" content="https://img.kingsir.work/i/20261108/project-lifeguide.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kingsir.work/life-guide/#website",
+      "url": "https://kingsir.work/life-guide/",
+      "name": "生活指南",
+      "description": "睡眠、饮食、锻炼三个专题：把一天里的关键决定拆成可执行的动作与数字口径。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://kingsir.work/life-guide/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kingsir.work/life-guide/#person",
+      "name": "kingsir",
+      "url": "https://kingsir.work/about/",
+      "sameAs": ["https://github.com/isnotry"]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://kingsir.work/life-guide/exercise.html#article",
+      "headline": "体能不是练出来的，是按剂量攒出来的",
+      "url": "https://kingsir.work/life-guide/exercise.html",
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "zh-CN",
+      "isPartOf": { "@id": "https://kingsir.work/life-guide/#website" },
+      "author": { "@id": "https://kingsir.work/life-guide/#person" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://img.kingsir.work/i/20261108/project-lifeguide.webp",
+        "width": 1200,
+        "height": 630,
+        "caption": "生活指南项目封面"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2230; --surface3:#232a38;
+  --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
+  --text:#e6edf3; --text2:#98a4b3; --text3:#6e7a8a;
+  --teal:#5DCAA5; --teal-dim:rgba(93,202,165,.14);
+  --amber:#EF9F27; --amber-dim:rgba(239,159,39,.14);
+  --red:#E24B4A; --red-dim:rgba(226,75,74,.14);
+  --blue:#58a6ff; --blue-dim:rgba(88,166,255,.14);
+  --r:12px; --r-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue",sans-serif;
+  font-size:16px; line-height:1.85; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+.topicbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px;font-size:12.5px}
+.topicbar a{display:inline-flex;align-items:center;gap:5px;color:var(--text3);text-decoration:none;transition:.15s}
+.topicbar .tico{width:16px;height:16px;flex:0 0 auto}
+.topicbar a:hover{color:var(--text2)}
+.topicbar a.on{color:var(--teal)}
+.topicbar .sep{color:var(--border2)}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.related a{font-size:13px;color:var(--text2);text-decoration:none;border:1px solid var(--border);
+  border-radius:999px;padding:4px 12px;transition:.15s}
+.related a:hover{color:var(--teal);border-color:rgba(93,202,165,.4)}
+.next-h{font-size:12.5px;color:var(--text3);letter-spacing:.08em;margin:30px 0 12px}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.next a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:14px 16px;text-decoration:none;transition:.2s}
+.next a:hover{border-color:rgba(93,202,165,.4);transform:translateY(-1px)}
+.next .n-k{font-size:11px;letter-spacing:.12em;color:var(--text3);margin-bottom:4px}
+.next .n-t{font-size:14.5px;color:var(--text);font-weight:600;line-height:1.6}
+.next .n-g{font-size:12px;color:var(--teal);margin-top:6px}
+
+header{padding:76px 0 44px;border-bottom:1px solid var(--border)}
+.kicker{font-size:12px;letter-spacing:.16em;color:var(--teal);font-weight:500;margin-bottom:18px}
+h1{font-size:40px;line-height:1.28;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
+h1 em{font-style:normal;color:var(--teal)}
+.sub{font-size:17px;color:var(--text2)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.pill{font-size:13px;border-radius:999px;padding:5px 13px;background:var(--surface2);
+  border:1px solid var(--border);color:var(--text2)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;white-space:nowrap;
+  padding:15px 11px;border-bottom:2px solid transparent;transition:.15s}
+nav a:hover{color:var(--text)}
+nav a.on{color:var(--teal);border-bottom-color:var(--teal)}
+
+section{padding:58px 0;border-bottom:1px solid var(--border)}
+.sec-n{font-size:12px;color:var(--text3);font-weight:500;letter-spacing:.12em;margin-bottom:12px}
+h2{font-size:26px;font-weight:600;margin-bottom:14px;letter-spacing:-.01em;line-height:1.4}
+.lead{color:var(--text2);font-size:16.5px;margin-bottom:30px}
+h3{font-size:18px;font-weight:600;margin:40px 0 14px;padding-top:4px}
+h4{font-size:16px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:var(--text2)}
+p b,li b,strong{color:var(--text);font-weight:600}
+ul,ol{margin:0 0 18px;padding-left:0;list-style:none}
+li{position:relative;padding-left:18px;margin-bottom:11px;color:var(--text2)}
+li:before{content:"";position:absolute;left:1px;top:13px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+ol{counter-reset:li}
+ol li{padding-left:28px;counter-increment:li}
+ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;height:auto;
+  background:none;color:var(--teal);font-size:13px;font-weight:600}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;margin-bottom:20px}
+.card.t{border-color:rgba(93,202,165,.28)}
+.card.b{border-color:rgba(88,166,255,.28)}
+.card.r{border-color:rgba(226,75,74,.25)}
+.card-h{font-size:16.5px;font-weight:600;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.tagline{font-size:12px;border-radius:5px;padding:1px 8px;font-weight:500;margin-right:8px}
+.tag-blue{background:var(--blue-dim);color:var(--blue)}
+.tag-teal{background:var(--teal-dim);color:var(--teal)}
+
+.spec{display:inline-block;font-size:13px;color:var(--teal);background:var(--teal-dim);
+  border-radius:6px;padding:2px 10px;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.spec.amb{color:var(--amber);background:var(--amber-dim)}
+
+.note{border-left:2px solid var(--amber);padding:3px 0 3px 18px;margin:24px 0;color:var(--text2)}
+.note.teal{border-color:var(--teal)} .note.red{border-color:var(--red)}
+
+/* timeline */
+.tl{position:relative;padding-left:4px;margin-top:6px}
+.tl-item{position:relative;padding:0 0 36px 36px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:before{content:"";position:absolute;left:9px;top:26px;bottom:0;width:1px;background:var(--border2)}
+.tl-item:last-child:before{display:none}
+.tl-dot{position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;
+  background:var(--surface3);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center}
+.tl-dot i{width:7px;height:7px;border-radius:50%;background:var(--teal);display:block}
+.tl-dot.b i{background:var(--blue)}
+.tl-time{font-size:12.5px;color:var(--teal);font-weight:500;letter-spacing:.04em}
+.tl-dot.b+.tl-time{color:var(--blue)}
+.tl-t{font-size:17px;font-weight:600;margin:4px 0 6px;line-height:1.5}
+.tl-d p:last-of-type{margin-bottom:0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.pnl{border-radius:var(--r-lg);padding:20px 22px;border:1px solid var(--border)}
+.pnl.y{background:var(--teal-dim);border-color:rgba(93,202,165,.25)}
+.pnl.n{background:var(--red-dim);border-color:rgba(226,75,74,.25)}
+.pnl h4{margin:0 0 12px;font-size:15px}
+.pnl.y h4{color:var(--teal)} .pnl.n h4{color:var(--red)}
+.pnl li{margin-bottom:9px;font-size:14.5px;line-height:1.7}
+.pnl.y li:before{background:var(--teal)} .pnl.n li:before{background:var(--red)}
+.pnl li:last-child{margin-bottom:0}
+
+/* evidence */
+.ev{border-left:2px solid var(--border2);padding:2px 0 2px 16px;margin:14px 0 0;font-size:14px;
+  color:var(--text3);line-height:1.8;display:none}
+.ev.on{display:block}
+.ev b{color:var(--text2);font-weight:600}
+.evtog{font-size:13px;color:var(--text3);cursor:pointer;background:none;border:none;
+  padding:6px 0 0;text-decoration:underline;text-underline-offset:3px}
+.evtog:hover{color:var(--teal)}
+.evref{display:inline-block;font-size:11.5px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;margin:8px 5px 0 0;font-family:ui-monospace,monospace;cursor:pointer}
+.evref:hover{background:rgba(88,166,255,.3)}
+
+/* refs */
+.reflist{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.ref{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;
+  font-size:13.5px;color:var(--text2);line-height:1.7;display:flex;gap:13px;transition:.4s}
+.ref .id{flex:0 0 auto;font-size:11px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;font-family:ui-monospace,monospace;height:fit-content;white-space:nowrap}
+.ref b{color:var(--text);font-weight:600}
+.ref:target,.ref.hit{background:var(--blue-dim);border-color:var(--blue)}
+
+footer{padding:46px 0 70px;color:var(--text3);font-size:13px;line-height:1.85}
+footer b{color:var(--text2)}
+footer .repo{display:inline-block;margin-top:10px;color:var(--text3);text-decoration:underline;
+  text-decoration-color:var(--border2);text-underline-offset:3px;transition:.15s}
+footer .repo:hover{color:var(--teal)}
+@media(hover:none){footer .repo{text-decoration-color:var(--border2)}}
+@media(max-width:640px){
+  h1{font-size:29px} h2{font-size:22px} h3{font-size:17px}
+  body{font-size:15.5px} section{padding:44px 0} header{padding:54px 0 34px}
+  .grid2,.two,.next{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topicbar">
+      <a href="index.html">生活指南</a>
+      <span class="sep">/</span>
+      <a href="diet.html"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11h16"/><path d="M6 11c0 4 2.7 7 6 7s6-3 6-7"/><path d="M9 7.5c0-1.2.9-1.8.9-2.8"/><path d="M13 7.5c0-1.2.9-1.8.9-2.8"/></svg>饮食</a>
+      <span class="sep">/</span>
+      <a href="exercise.html" class="on"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 9v6"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M20 9v6"/><path d="M7 12h10"/></svg>锻炼</a>
+      <span class="sep">/</span>
+      <a href="sleep.html"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 12.5 4a7 7 0 0 0 7.5 10.5z"/></svg>睡眠</a>
+    </div>
+    <div class="kicker">专题 02 · 锻炼</div>
+    <h1>体能不是练出来的，<em>是按剂量攒出来的</em></h1>
+    <p class="sub">有氧、力量、日常活动和恢复，一周各有一份剂量。搞清楚剂量，比「多运动」有用得多。每条建议都标了数字口径与依据，也标了什么时候该停。</p>
+    <div class="pills">
+      <div class="pill">每周 150–300 分钟</div>
+      <div class="pill">力量 ≥2 次/周</div>
+      <div class="pill">7000 步/天</div>
+      <div class="pill">每 30 分钟起身</div>
+      <div class="pill">睡前 3 小时收工</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#engine">两个引擎</a>
+    <a href="#day">一天的节奏</a>
+    <a href="#dose">一周剂量</a>
+    <a href="#move">动作选择</a>
+    <a href="#recover">环境与恢复</a>
+    <a href="#plan">四周推进</a>
+    <a href="#when">何时停下</a>
+    <a href="#refs">依据来源</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== 01 ========== -->
+<section id="engine">
+  <div class="wrap">
+    <div class="sec-n">01 / 原理</div>
+    <h2>两个引擎，缺一个都不算练</h2>
+    <p class="lead">有氧能力和力量是两个独立的适应。跑步能练心肺，但不会阻止肌肉随年龄流失；只做力量，心肺仍然是短板。</p>
+
+    <div class="grid2">
+      <div class="card b">
+        <div class="card-h"><span class="tagline tag-blue">引擎一</span>心肺</div>
+        <p style="margin-bottom:0">心脏、肺和血管的供氧能力。中等强度有氧每周 150–300 分钟，或高强度 75–150 分钟，可以累计，不必一次做完。</p>
+      </div>
+      <div class="card t">
+        <div class="card-h"><span class="tagline tag-teal">引擎二</span>力量</div>
+        <p style="margin-bottom:0">肌肉量与肌力。每周至少 2 次抗阻训练，覆盖腿、推、拉、髋和核心；每次 30 分钟左右就能拿到主要收益。</p>
+      </div>
+    </div>
+
+    <p>两个引擎都练，才对应「全因死亡风险最低」的那组数据。只做一种，收益会打折扣——<b>只跑步的人，肌肉仍在随年龄流失；只举铁的人，心肺仍是短板。</b></p>
+
+    <p>专门破坏这两个引擎的，是三件很日常的事：</p>
+    <ul>
+      <li><b>久坐</b>——独立于「今天有没有运动」的风险因素</li>
+      <li><b>周末突击</b>——一周不动、周末补一次大强度，受伤风险高且难以持续</li>
+      <li><b>只做一种</b>——只做有氧或只做力量，都会留下明显短板</li>
+    </ul>
+    <p>下面每一节都围绕这个逻辑展开。</p>
+
+    <div class="ev" data-for="g0">
+      <b>研究怎么说：</b>WHO《2020 身体活动与久坐行为指南》建议成人每周 150–300 分钟中等强度有氧，或 75–150 分钟高强度，或两者组合；并建议每周至少 2 天进行涉及主要肌群的力量训练。Mandsager 等（<i>JAMA Network Open</i>, 2018, n=122,007）发现心肺适能越高，全因死亡风险越低；与最低适能组相比，最高适能组的风险显著更低。
+    </div>
+    <button class="evtog" data-t="g0">展开依据</button>
+
+    <div class="ev" data-for="g1">
+      <b>研究怎么说：</b>Momma 等（<i>British Journal of Sports Medicine</i>, 2022）对 16 项队列研究的 Meta 分析显示，每周 30–60 分钟力量训练与全因死亡风险降低 10–17% 相关；力量训练与有氧训练的效果不能互相替代。这里的数字是观察性关联，不是「练满 60 分钟就能延长寿命」的因果承诺。
+    </div>
+    <button class="evtog" data-t="g1">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 02 ========== -->
+<section id="day">
+  <div class="wrap">
+    <div class="sec-n">02 / 一天的节奏</div>
+    <h2>把活动塞进一天，而不是只塞进一小时</h2>
+    <p class="lead">训练只是一天里的一小段。真正决定体能基础的，是另外十几个小时你怎么过。</p>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">起床后</div>
+        <div class="tl-t">先动起来，别急着上强度</div>
+        <div class="spec">5–10 分钟动态热身</div>
+        <div class="tl-d">
+          <p>早晨关节和体温都低，直接冲刺容易拉伤。快走、摆臂、髋绕环、徒手深蹲各 1 分钟即可。晨光下走动还顺带锚定生物钟（见睡眠专题）。</p>
+          <p>不必追求「空腹燃脂」这类说法。早晨训练的关键是能长期固定，而不是某个代谢窗口。</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">白天每 30–60 分钟</div>
+        <div class="tl-t">起身 2–3 分钟，打断久坐</div>
+        <div class="spec">2–3 分钟/次 · 接水/走楼梯/深蹲</div>
+        <div class="tl-d">
+          <p>久坐是独立风险，不等于「没运动」。即使当天练了 30 分钟，其余 10 小时坐着仍然有害。设一个每小时响的闹钟，起身接水、走楼梯、做 10 个深蹲都算。</p>
+        </div>
+        <div class="ev" data-for="t0">
+          <b>研究怎么说：</b>Dempsey 等（<i>Diabetes Care</i>, 2020）等研究显示，每隔 30 分钟用短时活动打断久坐，可改善餐后血糖与胰岛素反应。WHO 2020 指南首次把「限制久坐时间」写成独立建议，而不是只说「达到运动量就行」。
+        </div>
+        <button class="evtog" data-t="t0">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">训练时段</div>
+        <div class="tl-t">选你能固定的时间，而不是理论最优</div>
+        <div class="spec">每周固定 3–5 个时段</div>
+        <div class="tl-d">
+          <p>下午到傍晚体温和力量输出通常较高，但「能长期固定」比「理论最优」重要。把训练写进日历，和会议一样不可移动。周末突击不如每周分散。</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">睡前 3 小时</div>
+        <div class="tl-t">高强度收工</div>
+        <div class="spec amb">高强度 ≥3 小时前结束</div>
+        <div class="tl-d">
+          <p>高强度训练会升高核心体温和交感神经活性。睡眠专题建议运动在睡前 3 小时收工；中等强度散步通常不受影响。如果你晚上训练后难以入睡，把强度往前提，而不是直接放弃训练。</p>
+        </div>
+        <div class="ev" data-for="t1">
+          <b>研究怎么说：</b>Kredlow 等（<i>Journal of Behavioral Medicine</i>, 2015）的 Meta 分析汇总了急性与长期运动研究：中等强度有氧或抗阻训练总体改善睡眠质量与时长，效应为小到中等。睡前 1 小时内的极高强度运动可能延迟入睡，但个体差异较大——「运动改善睡眠」不是绝对承诺。
+        </div>
+        <button class="evtog" data-t="t1">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">睡前</div>
+        <div class="tl-t">放松，不追加强度</div>
+        <div class="spec">5 分钟慢呼吸或轻柔拉伸</div>
+        <div class="tl-d">
+          <p>拉伸不是必须，但 5 分钟慢呼吸或轻柔拉伸有助于从训练状态切换出来。真正的恢复发生在睡眠里——睡不够时，加量通常不会让你更强。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 ========== -->
+<section id="dose">
+  <div class="wrap">
+    <div class="sec-n">03 / 剂量</div>
+    <h2>一周四份剂量</h2>
+    <p class="lead">有氧、力量、日常步数、柔韧与平衡。每份都有下限和上限，做到下限就有效，超过上限的边际收益通常变小。</p>
+
+    <h3>有氧：150–300 分钟中等，或 75–150 分钟高强度</h3>
+    <div class="spec">中等强度 RPE 12–14 · 能说话但不能唱歌</div>
+    <p>快走、骑车、游泳、爬楼梯都算。不必一次做完，10 分钟一段累计也有效。判断中等强度最实用的方法是「说话测试」：能完整说句子，但不能唱歌。</p>
+    <div class="ev" data-for="w0">
+      <b>研究怎么说：</b>WHO 2020 指南与 ACSM 立场声明一致建议：成人每周 150–300 分钟中等强度有氧，或 75–150 分钟高强度有氧，或两者等价组合。小于 150 分钟也不是「无效」，只是收益相对少；从 0 到 60 分钟的增量收益最大。
+    </div>
+    <button class="evtog" data-t="w0">展开依据</button>
+
+    <h3>力量：每周 2 次，30–60 分钟就够</h3>
+    <div class="spec">≥2 次/周 · 覆盖腿/推/拉/髋/核心</div>
+    <p>每次 2–4 个动作，每个 2–3 组、8–12 次，做到最后 2 次有点吃力但姿势不变。新手从自重和弹力带开始。30–60 分钟/周的力量训练已与更低死亡风险相关，超过 60 分钟后收益趋于平台。</p>
+    <div class="ev" data-for="w1">
+      <b>研究怎么说：</b>Momma 等（<i>BJSM</i>, 2022）的 Meta 分析显示，每周 30–60 分钟力量训练与全因死亡风险降低 10–17% 相关；WHO 2020 建议每周至少 2 天进行主要肌群的力量训练。力量训练的「剂量」指有效组数，不是健身房停留时间。
+    </div>
+    <button class="evtog" data-t="w1">展开依据</button>
+
+    <h3>日常步数：7000–8000 步是性价比区间</h3>
+    <div class="spec">约 7000–8000 步/天 · 老年人 6000–8000 步</div>
+    <p>步数收益有平台期。对多数成年人，约 7,000–8,000 步/天已能显著降低死亡风险，继续增加收益趋缓；对 60 岁以上人群，收益大约从 6,000 步开始明显，约 8,000 步后趋平。对部分老年女性，4,400 步左右已优于 2,700 步。<b>别把 10,000 步当成硬指标</b>。</p>
+    <div class="ev" data-for="w2">
+      <b>研究怎么说：</b>Paluch 等（<i>Lancet Public Health</i>, 2022）对 15 项队列、47,471 名成人的 Meta 分析：步数越高死亡风险越低，约 7,000–8,000 步后趋于平台，且不同年龄段的拐点不同。Lee 等（<i>JAMA Internal Medicine</i>, 2019）对 16,741 名老年女性的研究显示，约 4,400 步即出现明显收益，约 7,500 步后趋缓。
+    </div>
+    <button class="evtog" data-t="w2">展开依据</button>
+
+    <h3>强度怎么判断</h3>
+    <div class="spec">说话测试 · RPE · 不用 220-年龄</div>
+    <p>「220-年龄」的最大心率公式误差可达 ±10–12 次/分，不适合作为唯一依据。用说话测试和 RPE（自觉用力程度，6–20 或 0–10 量表）更实际。手表的心率区间只能参考，不能替代体感。</p>
+    <div class="ev" data-for="w3">
+      <b>研究怎么说：</b>ACSM 指出，年龄预测最大心率公式的个体误差较大（常见标准差约 10–12 次/分）；RPE 与说话测试是更稳妥的自我强度工具。服用 β 受体阻滞剂等影响心率的药物时，心率区间尤其不可靠，应改用量表与医生建议。
+    </div>
+    <button class="evtog" data-t="w3">展开依据</button>
+
+    <h3>进阶：一次只加一个变量</h3>
+    <div class="spec">每周 +5–10% 或 +1 组</div>
+    <p>「10% 规则」是经验法则，不是定律。更稳妥的做法是：这周只加时长，下周只加重量，不同时加。疼痛和持续疲劳出现时，退回上一周。</p>
+    <div class="ev" data-for="w4">
+      <b>研究怎么说：</b>ACSM 的渐进原则建议逐步增加频率、强度、时间，避免同时大幅增加。对新手而言，先建立规律比追求每周进步更重要；「每周必须加量」反而容易导致过度使用伤。
+    </div>
+    <button class="evtog" data-t="w4">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 04 ========== -->
+<section id="move">
+  <div class="wrap">
+    <div class="sec-n">04 / 动作</div>
+    <h2>五个模式，覆盖全身</h2>
+    <p class="lead">不需要几十个动作。把五个基本模式各选一个，就能覆盖主要肌群，也不容易漏掉某个方向。</p>
+
+    <h3>五个动作模式</h3>
+    <div class="spec">蹲 · 推 · 拉 · 髋铰链 · 负重行走</div>
+    <p><b>蹲</b>（深蹲或椅子坐起）、<b>推</b>（俯卧撑或墙推）、<b>拉</b>（划船或弹力带拉）、<b>髋铰链</b>（臀桥或硬拉）、<b>负重行走</b>（拎水瓶走）。每个模式 2–3 组，动作慢、姿势稳，比数量重要。</p>
+
+    <h3>有氧：选关节友好的</h3>
+    <div class="spec">快走/骑车/游泳/爬楼</div>
+    <p>体重较大或膝踝不适，优先骑车、游泳、椭圆机；跑步不是唯一答案。关键是能持续 20–30 分钟且第二天不疼。疼痛持续就换项目，不要硬扛。</p>
+
+    <h3>别指望「局部减脂」</h3>
+    <div class="spec">减脂是全身的</div>
+    <p>仰卧起坐不会优先减肚子，局部训练主要增加局部肌肉。减少腹部脂肪靠总体能量缺口加全身训练；腹部线条是体脂率的结果，不是某个动作的功劳。</p>
+
+    <h3>最小可行方案</h3>
+    <div class="spec">每周 3 次 × 20 分钟</div>
+    <p>如果从零开始：每周 3 次快走 20 分钟，加每周 2 次 15 分钟自重力量（椅子坐起、墙推、臀桥、弹力带拉、拎水瓶走）。先建立「固定时段」，再谈强度和时长。</p>
+
+    <div class="two">
+      <div class="pnl y">
+        <h4>建议</h4>
+        <ul>
+          <li>有氧与力量都排进一周</li>
+          <li>先固定时段，再加强度</li>
+          <li>每次只加一个变量</li>
+          <li>把步行和起身算进日常活动</li>
+        </ul>
+      </div>
+      <div class="pnl n">
+        <h4>避免</h4>
+        <ul>
+          <li>一周不动、周末突击</li>
+          <li>只做有氧或只做力量</li>
+          <li>用「练了」为加餐找理由</li>
+          <li>带锐痛继续训练</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 05 ========== -->
+<section id="recover">
+  <div class="wrap">
+    <div class="sec-n">05 / 恢复</div>
+    <h2>环境与恢复：让训练真的变成体能</h2>
+    <p class="lead">训练是刺激，恢复才是适应。睡不够、吃不够、天天加量，都会让训练变成消耗。</p>
+
+    <h3>降低启动成本</h3>
+    <div class="spec">10 分钟半径 · 装备就位</div>
+    <p>把运动鞋放在门口、训练服前一晚摆好、选离家或公司 10 分钟内的场地。每次少一个决策，就多一分执行率。器械不必复杂：一对弹力带、一张瑜伽垫、一双合脚的鞋，足够开始。</p>
+
+    <h3>疼痛红绿灯</h3>
+    <div class="spec amb">酸胀可继续 · 锐痛要停</div>
+    <p>训练后 24–72 小时的肌肉酸胀（DOMS）正常；关节锐痛、肿胀、夜间痛、发热不是「练到位」，是信号。持续超过 2 周，找运动医学或康复科评估。</p>
+    <div class="ev" data-for="r0">
+      <b>研究怎么说：</b>Cheung 等（<i>Sports Medicine</i>, 2003）的综述指出，延迟性肌肉酸痛通常在运动后 24–72 小时达峰，5–7 天内缓解；锐痛、肿胀、活动受限不符合 DOMS 的典型特征，应视为损伤信号。
+    </div>
+    <button class="evtog" data-t="r0">展开依据</button>
+
+    <h3>恢复：睡眠是主项</h3>
+    <div class="spec">7–9 小时睡眠 · 蛋白质按体重 0.8–1.2 g/kg</div>
+    <p>肌肉在睡眠中修复。睡不够时，训练表现和恢复都会下降，受伤风险上升。把睡眠专题的锚点先做好，再谈加量。饮食上保证总能量和蛋白质，比买恢复补剂更实际。</p>
+    <div class="ev" data-for="r1">
+      <b>研究怎么说：</b>睡眠不足与运动表现下降、受伤风险上升相关，机制涉及糖原恢复、激素环境与神经肌肉功能。现有证据多为观察性或小样本实验，不能精确量化「少睡 1 小时等于损失多少训练效果」，但方向一致：恢复不足时加量不划算。
+    </div>
+    <button class="evtog" data-t="r1">展开依据</button>
+
+    <h3>休息日不是偷懒</h3>
+    <div class="spec">同一肌群通常间隔 48 小时</div>
+    <p>力量训练后同一肌群通常留 48 小时再练。休息日可以散步、拉伸，保持活动但不加负荷。把休息日写进计划，才不会在疲劳累积时才被迫停。</p>
+
+    <h3>老年人加一份平衡</h3>
+    <div class="spec">每周 3 天 · 平衡与防跌倒</div>
+    <p>65 岁以上在达到有氧与力量建议之外，每周应有 3 天进行平衡训练（如单脚站立、脚跟脚尖走、太极）。目标是防跌倒，不是追求强度。</p>
+    <div class="ev" data-for="r2">
+      <b>研究怎么说：</b>WHO 2020 指南对 65 岁以上人群额外建议：每周 3 天以上进行多成分的平衡与力量训练，以降低跌倒风险；具体方案应结合个人疾病、用药与居家环境评估。
+    </div>
+    <button class="evtog" data-t="r2">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 06 ========== -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-n">06 / 节奏</div>
+    <h2>怎么开始：四周推进</h2>
+    <p class="lead">别一上来就按「每周 150 分钟 + 2 次力量」执行。从零开始的人，前两周的目标只是不中断。</p>
+
+    <h4>第 1 周 · 只做日常活动</h4>
+    <p>每天走到 7000 步，每 30–60 分钟起身 2–3 分钟。不安排正式训练。先把「动起来」变成默认状态，而不是额外任务。</p>
+
+    <h4>第 2 周 · 加两次快走</h4>
+    <p>20–30 分钟中等强度，能说话但不能唱歌。选两个固定时段写进日历。如果只能做到一次，也比零次好。</p>
+
+    <h4>第 3 周 · 加两次力量</h4>
+    <p>每次 20 分钟，五个模式各 1–2 组。用自重或弹力带，动作慢、姿势稳。力量训练和有氧可以隔天安排，避免同一天堆满。</p>
+
+    <h4>第 4 周 · 加到目标剂量</h4>
+    <p>有氧累计到 150 分钟（可拆成 5 次 × 30 分钟），力量保持 2 次。复盘哪两个时段真能固定，把不能固定的换掉，而不是靠意志力硬撑。</p>
+
+    <div class="note teal">
+      <b>评估节点：</b>连续执行 4 周后再判断。更稳的指标是：同样配速下心率更低、同样重量下动作更稳、日常爬楼不喘、睡眠和精力改善。体重变化不是唯一指标。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 07 ========== -->
+<section id="when">
+  <div class="wrap">
+    <div class="sec-n">07 / 边界</div>
+    <h2>这几种情况，先停或先评估</h2>
+    <p class="lead">运动指南是给大多数人的建议。有明确疾病、症状或长期不运动的人，需要先做筛查。</p>
+
+    <div class="card r">
+      <div class="card-h" style="color:var(--red)">出现以下任一情况，停止运动并就医</div>
+      <ul>
+        <li><b>运动时胸痛、压迫感、晕厥或异常气促</b>——立即停止，必要时急诊。不要用「再坚持一下」解释。</li>
+        <li><b>已知心血管病、糖尿病、慢性肾病、严重关节病</b>——先做运动前筛查（PAR-Q+ 或医生评估），再按个体化方案执行。</li>
+        <li><b>65 岁以上或长期不运动</b>——从低强度开始，优先加入平衡训练，注意居家环境与跌倒风险。</li>
+        <li><b>关节红肿热痛、夜间痛、持续超过 2 周</b>——找运动医学或康复科，不要靠休息硬扛或继续加量。</li>
+        <li><b>过度训练信号</b>——静息心率持续升高、失眠、情绪低落、同一重量突然吃力。先减量，必要时就医。</li>
+      </ul>
+    </div>
+
+    <div class="note teal">
+      <b>有慢性病也能练：</b>多数慢性病患者从低强度开始、循序渐进是安全的，收益也明确。关键是别照搬健康人的剂量，也别因为害怕而完全不动——先和医生确认强度与禁忌。
+    </div>
+
+    <div class="next-h">继续读</div>
+    <div class="next">
+      <a href="diet.html">
+        <div class="n-k">01 / 饮食</div>
+        <div class="n-t">吃得对不是少吃，是换几个默认选项</div>
+        <div class="n-g">继续读 →</div>
+      </a>
+      <a href="sleep.html">
+        <div class="n-k">03 / 睡眠</div>
+        <div class="n-t">好睡眠是白天修出来的</div>
+        <div class="n-g">继续读 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 08 ========== -->
+<section id="refs">
+  <div class="wrap">
+    <div class="sec-n">08 / 来源</div>
+    <h2>参考依据与来源</h2>
+    <p class="lead">上文每条建议的展开依据都对应下面这些指南或原始研究。点击依据段落末尾的蓝色编号可跳转到对应条目。</p>
+
+    <h3>身体活动指南</h3>
+    <div class="reflist">
+      <div class="ref" id="r1"><span class="id">R1</span><div><b>World Health Organization</b> — WHO Guidelines on Physical Activity and Sedentary Behaviour, 2020（Bull FC, et al. <i>British Journal of Sports Medicine</i>, 2020）。成人每周 150–300 分钟中等强度或 75–150 分钟高强度有氧；每周 ≥2 天力量训练；限制久坐；65 岁以上每周 ≥3 天平衡训练。</div></div>
+      <div class="ref" id="r2"><span class="id">R2</span><div><b>《中国人群身体活动指南（2021）》</b> — 成年人每周 150–300 分钟中等强度或 75–150 分钟高强度身体活动；每周 2–3 次抗阻训练；减少久坐，鼓励日常步行。</div></div>
+      <div class="ref" id="r3"><span class="id">R3</span><div><b>American College of Sports Medicine</b> — Quantity and Quality of Exercise for Developing and Maintaining Cardiorespiratory, Musculoskeletal, and Neuromotor Fitness（Garber CE, et al., 2011）及抗阻训练相关立场声明。有氧、力量、柔韧与神经运动能力的处方框架。</div></div>
+    </div>
+
+    <h3>心肺适能与死亡风险</h3>
+    <div class="reflist">
+      <div class="ref" id="r4"><span class="id">R4</span><div><b>Mandsager K, et al.</b> Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing. <i>JAMA Network Open</i>, 2018, 1(6):e183605. — n=122,007；心肺适能越高，全因死亡风险越低，最高适能组显著低于最低组。</div></div>
+      <div class="ref" id="r5"><span class="id">R5</span><div><b>Momma H, et al.</b> Muscle-strengthening activities are associated with lower risk of mortality: a systematic review and meta-analysis of cohort studies. <i>British Journal of Sports Medicine</i>, 2022, 56(7):755–763. — 16 项队列；每周 30–60 分钟力量训练与全因死亡风险降低 10–17% 相关。</div></div>
+    </div>
+
+    <h3>步数与久坐</h3>
+    <div class="reflist">
+      <div class="ref" id="r6"><span class="id">R6</span><div><b>Paluch AE, et al.</b> Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. <i>Lancet Public Health</i>, 2022, 7(3):e219–e228. — 15 项队列、47,471 名成人；步数越高死亡风险越低，约 7,000–8,000 步后趋于平台，不同年龄段拐点不同。</div></div>
+      <div class="ref" id="r7"><span class="id">R7</span><div><b>Lee IM, et al.</b> Association of step volume and intensity with all-cause mortality in older women. <i>JAMA Internal Medicine</i>, 2019, 179(8):1105–1112. — 16,741 名老年女性；约 4,400 步/天已显著低于约 2,700 步/天的死亡风险，约 7,500 步后趋缓。</div></div>
+      <div class="ref" id="r8"><span class="id">R8</span><div><b>Dempsey PC, et al.</b> <i>Diabetes Care</i>, 2020 及相关久坐打断研究。 — 每隔 30 分钟用 2–3 分钟活动打断久坐，可改善餐后血糖与胰岛素反应。</div></div>
+    </div>
+
+    <h3>力量、进阶与强度</h3>
+    <div class="reflist">
+      <div class="ref" id="r9"><span class="id">R9</span><div><b>ACSM</b> — Progression models in resistance training for healthy adults（2009 立场声明）及相关教科书。逐步增加频率、强度、时间，避免同时大幅增加；新手先建立动作质量与规律。</div></div>
+      <div class="ref" id="r10"><span class="id">R10</span><div><b>ACSM</b> — 年龄预测最大心率与 RPE 的说明。220-年龄公式个体误差较大（常见标准差约 10–12 次/分）；说话测试与 Borg RPE 是更稳妥的自我强度工具。</div></div>
+      <div class="ref" id="r11"><span class="id">R11</span><div><b>Borg G.</b> Borg's Perceived Exertion and Pain Scales（1998）；ACSM 运动测试与处方指南。RPE 6–20 或 0–10 量表用于自我调节强度。</div></div>
+    </div>
+
+    <h3>恢复、疼痛与筛查</h3>
+    <div class="reflist">
+      <div class="ref" id="r12"><span class="id">R12</span><div><b>Cheung K, et al.</b> Delayed onset muscle soreness: treatment strategies and factors affecting outcome. <i>Sports Medicine</i>, 2003, 33(2):145–164. — DOMS 通常在运动后 24–72 小时达峰，5–7 天缓解；锐痛、肿胀、活动受限应视为损伤信号。</div></div>
+      <div class="ref" id="r13"><span class="id">R13</span><div><b>Kredlow MA, et al.</b> The effects of physical activity on sleep: a meta-analytic review. <i>Journal of Behavioral Medicine</i>, 2015, 38(3):427–449. — 汇总急性与长期运动研究；中等强度有氧或抗阻训练总体改善睡眠质量与时长，效应小到中等。</div></div>
+      <div class="ref" id="r14"><span class="id">R14</span><div><b>PAR-Q+ / ePARmed-X+</b> — 运动前健康筛查工具（Warburton DER, et al.）。用于判断是否需要先咨询医生，尤其适用于有慢性病、症状或长期不运动者。</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>内容基于截至 2026 年 11 月的公开研究与临床指南整理。文中每条建议的展开依据均可在「依据来源」中定位到原始文献。</p>
+    <p style="margin-top:12px">本页用于科普与自我调整参考，<b>不能替代医生诊断或运动处方</b>。出现胸痛、晕厥、异常气促、关节锐痛或已知慢性病加重时，请停止运动并及时就医。</p>
+    <div class="related">
+      <a href="index.html">生活指南首页</a>
+      <a href="diet.html">饮食指南</a>
+      <a href="sleep.html">睡眠指南</a>
+    </div>
+    <a class="repo" href="https://github.com/isnotry/life-guide" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 · Open source on GitHub</a>
+  </div>
+</footer>
+
+<script>
+var MAP={
+  g0:'r1',g1:'r5',t0:'r8',t1:'r13',
+  w0:'r1',w1:'r5',w2:'r6',w3:'r10',w4:'r9',
+  r0:'r12',r1:null,r2:'r1'
+};
+
+[].slice.call(document.querySelectorAll('.evtog')).forEach(function(b){
+  b.addEventListener('click',function(){
+    var box=document.querySelector('.ev[data-for="'+b.dataset.t+'"]');
+    if(!box)return;
+    var on=box.classList.toggle('on');
+    b.textContent=on?'收起依据':'展开依据';
+  });
+});
+
+[].slice.call(document.querySelectorAll('.ev')).forEach(function(box){
+  var id=MAP[box.dataset.for];
+  if(!id)return;
+  var tag=document.createElement('span');
+  tag.className='evref';tag.textContent=id.toUpperCase()+' ↗';
+  tag.addEventListener('click',function(){
+    var t=document.getElementById(id);
+    if(!t)return;
+    t.scrollIntoView({behavior:'smooth',block:'center'});
+    t.classList.add('hit');
+    setTimeout(function(){t.classList.remove('hit')},1800);
+  });
+  box.appendChild(tag);
+});
+
+var secs=[].slice.call(document.querySelectorAll('section'));
+var links=[].slice.call(document.querySelectorAll('nav a'));
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+130,cur=0;
+  secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+  links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+});
+</script>
+</body>
+</html>

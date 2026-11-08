@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吃得对不是少吃 · 饮食指南 · 生活指南</title>
+<meta name="description" content="把饮食拆成一天里的几个决定：早餐蛋白质、餐盘比例、零食可见性、标签怎么看。15 条编号来源逐条可查，单文件网页，不联网不上传。">
+<meta name="keywords" content="饮食指南, 健康饮食, 餐盘法, 蛋白质, 膳食纤维, 营养标签, 生活指南">
+<meta name="author" content="kingsir">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kingsir.work/life-guide/diet.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="生活指南 · Life Guide">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="吃得对不是少吃 · 饮食指南">
+<meta property="og:description" content="把饮食拆成一天里的几个决定：早餐蛋白质、餐盘比例、零食可见性、标签怎么看。15 条编号来源逐条可查。">
+<meta property="og:url" content="https://kingsir.work/life-guide/diet.html">
+<meta property="og:image" content="https://img.kingsir.work/i/20261108/project-lifeguide.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="生活指南项目封面：指南针图标与饮食、锻炼、睡眠三份生活指南">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="吃得对不是少吃 · 饮食指南">
+<meta name="twitter:description" content="把饮食拆成一天里的几个决定：早餐蛋白质、餐盘比例、零食可见性、标签怎么看。">
+<meta name="twitter:image" content="https://img.kingsir.work/i/20261108/project-lifeguide.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kingsir.work/life-guide/#website",
+      "url": "https://kingsir.work/life-guide/",
+      "name": "生活指南",
+      "description": "睡眠、饮食、锻炼三个专题：把一天里的关键决定拆成可执行的动作与数字口径。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://kingsir.work/life-guide/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kingsir.work/life-guide/#person",
+      "name": "kingsir",
+      "url": "https://kingsir.work/about/",
+      "sameAs": ["https://github.com/isnotry"]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://kingsir.work/life-guide/diet.html#article",
+      "headline": "吃得对不是少吃，是换几个默认选项",
+      "url": "https://kingsir.work/life-guide/diet.html",
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "zh-CN",
+      "isPartOf": { "@id": "https://kingsir.work/life-guide/#website" },
+      "author": { "@id": "https://kingsir.work/life-guide/#person" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://img.kingsir.work/i/20261108/project-lifeguide.webp",
+        "width": 1200,
+        "height": 630,
+        "caption": "生活指南项目封面"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0d1117; --surface:#161b22; --surface2:#1c2230; --surface3:#232a38;
+  --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
+  --text:#e6edf3; --text2:#98a4b3; --text3:#6e7a8a;
+  --teal:#5DCAA5; --teal-dim:rgba(93,202,165,.14);
+  --amber:#EF9F27; --amber-dim:rgba(239,159,39,.14);
+  --red:#E24B4A; --red-dim:rgba(226,75,74,.14);
+  --blue:#58a6ff; --blue-dim:rgba(88,166,255,.14);
+  --r:12px; --r-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue",sans-serif;
+  font-size:16px; line-height:1.85; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+.topicbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px;font-size:12.5px}
+.topicbar a{display:inline-flex;align-items:center;gap:5px;color:var(--text3);text-decoration:none;transition:.15s}
+.topicbar .tico{width:16px;height:16px;flex:0 0 auto}
+.topicbar a:hover{color:var(--text2)}
+.topicbar a.on{color:var(--teal)}
+.topicbar .sep{color:var(--border2)}
+.related{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.related a{font-size:13px;color:var(--text2);text-decoration:none;border:1px solid var(--border);
+  border-radius:999px;padding:4px 12px;transition:.15s}
+.related a:hover{color:var(--teal);border-color:rgba(93,202,165,.4)}
+.next-h{font-size:12.5px;color:var(--text3);letter-spacing:.08em;margin:30px 0 12px}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.next a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:14px 16px;text-decoration:none;transition:.2s}
+.next a:hover{border-color:rgba(93,202,165,.4);transform:translateY(-1px)}
+.next .n-k{font-size:11px;letter-spacing:.12em;color:var(--text3);margin-bottom:4px}
+.next .n-t{font-size:14.5px;color:var(--text);font-weight:600;line-height:1.6}
+.next .n-g{font-size:12px;color:var(--teal);margin-top:6px}
+
+header{padding:76px 0 44px;border-bottom:1px solid var(--border)}
+.kicker{font-size:12px;letter-spacing:.16em;color:var(--teal);font-weight:500;margin-bottom:18px}
+h1{font-size:40px;line-height:1.28;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
+h1 em{font-style:normal;color:var(--teal)}
+.sub{font-size:17px;color:var(--text2)}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.pill{font-size:13px;border-radius:999px;padding:5px 13px;background:var(--surface2);
+  border:1px solid var(--border);color:var(--text2)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;white-space:nowrap;
+  padding:15px 11px;border-bottom:2px solid transparent;transition:.15s}
+nav a:hover{color:var(--text)}
+nav a.on{color:var(--teal);border-bottom-color:var(--teal)}
+
+section{padding:58px 0;border-bottom:1px solid var(--border)}
+.sec-n{font-size:12px;color:var(--text3);font-weight:500;letter-spacing:.12em;margin-bottom:12px}
+h2{font-size:26px;font-weight:600;margin-bottom:14px;letter-spacing:-.01em;line-height:1.4}
+.lead{color:var(--text2);font-size:16.5px;margin-bottom:30px}
+h3{font-size:18px;font-weight:600;margin:40px 0 14px;padding-top:4px}
+h4{font-size:16px;font-weight:600;margin:26px 0 10px}
+p{margin-bottom:16px;color:var(--text2)}
+p b,li b,strong{color:var(--text);font-weight:600}
+ul,ol{margin:0 0 18px;padding-left:0;list-style:none}
+li{position:relative;padding-left:18px;margin-bottom:11px;color:var(--text2)}
+li:before{content:"";position:absolute;left:1px;top:13px;width:5px;height:5px;border-radius:50%;background:var(--text3)}
+ol{counter-reset:li}
+ol li{padding-left:28px;counter-increment:li}
+ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;height:auto;
+  background:none;color:var(--teal);font-size:13px;font-weight:600}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;margin-bottom:20px}
+.card.t{border-color:rgba(93,202,165,.28)}
+.card.b{border-color:rgba(88,166,255,.28)}
+.card.r{border-color:rgba(226,75,74,.25)}
+.card-h{font-size:16.5px;font-weight:600;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.tagline{font-size:12px;border-radius:5px;padding:1px 8px;font-weight:500;margin-right:8px}
+.tag-blue{background:var(--blue-dim);color:var(--blue)}
+.tag-teal{background:var(--teal-dim);color:var(--teal)}
+
+.spec{display:inline-block;font-size:13px;color:var(--teal);background:var(--teal-dim);
+  border-radius:6px;padding:2px 10px;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.spec.amb{color:var(--amber);background:var(--amber-dim)}
+
+.note{border-left:2px solid var(--amber);padding:3px 0 3px 18px;margin:24px 0;color:var(--text2)}
+.note.teal{border-color:var(--teal)} .note.red{border-color:var(--red)}
+
+/* timeline */
+.tl{position:relative;padding-left:4px;margin-top:6px}
+.tl-item{position:relative;padding:0 0 36px 36px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:before{content:"";position:absolute;left:9px;top:26px;bottom:0;width:1px;background:var(--border2)}
+.tl-item:last-child:before{display:none}
+.tl-dot{position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;
+  background:var(--surface3);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center}
+.tl-dot i{width:7px;height:7px;border-radius:50%;background:var(--teal);display:block}
+.tl-dot.b i{background:var(--blue)}
+.tl-time{font-size:12.5px;color:var(--teal);font-weight:500;letter-spacing:.04em}
+.tl-dot.b+.tl-time{color:var(--blue)}
+.tl-t{font-size:17px;font-weight:600;margin:4px 0 6px;line-height:1.5}
+.tl-d p:last-of-type{margin-bottom:0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.pnl{border-radius:var(--r-lg);padding:20px 22px;border:1px solid var(--border)}
+.pnl.y{background:var(--teal-dim);border-color:rgba(93,202,165,.25)}
+.pnl.n{background:var(--red-dim);border-color:rgba(226,75,74,.25)}
+.pnl h4{margin:0 0 12px;font-size:15px}
+.pnl.y h4{color:var(--teal)} .pnl.n h4{color:var(--red)}
+.pnl li{margin-bottom:9px;font-size:14.5px;line-height:1.7}
+.pnl.y li:before{background:var(--teal)} .pnl.n li:before{background:var(--red)}
+.pnl li:last-child{margin-bottom:0}
+
+/* evidence */
+.ev{border-left:2px solid var(--border2);padding:2px 0 2px 16px;margin:14px 0 0;font-size:14px;
+  color:var(--text3);line-height:1.8;display:none}
+.ev.on{display:block}
+.ev b{color:var(--text2);font-weight:600}
+.evtog{font-size:13px;color:var(--text3);cursor:pointer;background:none;border:none;
+  padding:6px 0 0;text-decoration:underline;text-underline-offset:3px}
+.evtog:hover{color:var(--teal)}
+.evref{display:inline-block;font-size:11.5px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;margin:8px 5px 0 0;font-family:ui-monospace,monospace;cursor:pointer}
+.evref:hover{background:rgba(88,166,255,.3)}
+
+/* refs */
+.reflist{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.ref{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;
+  font-size:13.5px;color:var(--text2);line-height:1.7;display:flex;gap:13px;transition:.4s}
+.ref .id{flex:0 0 auto;font-size:11px;color:var(--blue);background:var(--blue-dim);
+  border-radius:5px;padding:1px 8px;font-family:ui-monospace,monospace;height:fit-content;white-space:nowrap}
+.ref b{color:var(--text);font-weight:600}
+.ref:target,.ref.hit{background:var(--blue-dim);border-color:var(--blue)}
+
+footer{padding:46px 0 70px;color:var(--text3);font-size:13px;line-height:1.85}
+footer b{color:var(--text2)}
+footer .repo{display:inline-block;margin-top:10px;color:var(--text3);text-decoration:underline;
+  text-decoration-color:var(--border2);text-underline-offset:3px;transition:.15s}
+footer .repo:hover{color:var(--teal)}
+@media(hover:none){footer .repo{text-decoration-color:var(--border2)}}
+@media(max-width:640px){
+  h1{font-size:29px} h2{font-size:22px} h3{font-size:17px}
+  body{font-size:15.5px} section{padding:44px 0} header{padding:54px 0 34px}
+  .grid2,.two,.next{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topicbar">
+      <a href="index.html">生活指南</a>
+      <span class="sep">/</span>
+      <a href="diet.html" class="on"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 11h16"/><path d="M6 11c0 4 2.7 7 6 7s6-3 6-7"/><path d="M9 7.5c0-1.2.9-1.8.9-2.8"/><path d="M13 7.5c0-1.2.9-1.8.9-2.8"/></svg>饮食</a>
+      <span class="sep">/</span>
+      <a href="exercise.html"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 9v6"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M20 9v6"/><path d="M7 12h10"/></svg>锻炼</a>
+      <span class="sep">/</span>
+      <a href="sleep.html"><svg class="tico" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 12.5 4a7 7 0 0 0 7.5 10.5z"/></svg>睡眠</a>
+    </div>
+    <div class="kicker">专题 01 · 饮食</div>
+    <h1>吃得对不是少吃，<em>是换几个默认选项</em></h1>
+    <p class="sub">饮食不用每天计算克数。先把餐盘比例、蛋白质分配、零食可见性这几个「默认值」调对，剩下的空间留给生活和社交。每条建议都标了数字口径，关键结论附研究依据。</p>
+    <div class="pills">
+      <div class="pill">蔬菜 300–500 g</div>
+      <div class="pill">水果 200–350 g</div>
+      <div class="pill">盐 &lt;5 g</div>
+      <div class="pill">添加糖 ≤25 g</div>
+      <div class="pill">蛋白质每餐 20–30 g</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#engine">两个账本</a>
+    <a href="#day">一天的吃法</a>
+    <a href="#plate">餐盘结构</a>
+    <a href="#skills">关键技巧</a>
+    <a href="#env">厨房环境</a>
+    <a href="#plan">四周推进</a>
+    <a href="#when">何时求助</a>
+    <a href="#refs">依据来源</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ========== 01 ========== -->
+<section id="engine">
+  <div class="wrap">
+    <div class="sec-n">01 / 原理</div>
+    <h2>两个账本，必须同时算</h2>
+    <p class="lead">体重和健康不是同一件事：能量决定体重走向，食物质量决定这些能量把你带到哪里。只算一个账本，通常会走向「越减越难」。</p>
+
+    <div class="grid2">
+      <div class="card b">
+        <div class="card-h"><span class="tagline tag-blue">账本一</span>能量平衡</div>
+        <p style="margin-bottom:0">长期体重变化由摄入与消耗的差值决定。但「少吃」本身不是策略——饥饿会反击，能长期执行的结构才有效。</p>
+      </div>
+      <div class="card t">
+        <div class="card-h"><span class="tagline tag-teal">账本二</span>食物质量</div>
+        <p style="margin-bottom:0">同样 500 kcal，来自炸薯条和来自「蔬菜 + 鱼 + 全谷物」，对饱腹、血脂、血糖和肠道的作用完全不同。</p>
+      </div>
+    </div>
+
+    <p>两个账本都到位：能量不长期盈余，且食物以低加工、高营养密度为主，体重和代谢指标才不容易反弹。</p>
+
+    <p>专门搞坏两个账本的，是三件很日常的事：</p>
+    <ul>
+      <li><b>含糖饮料</b>——液体热量饱腹感弱，容易在不知不觉中喝进 200–300 kcal</li>
+      <li><b>超加工零食</b>——高能量密度、低饱腹感，越吃越想吃</li>
+      <li><b>无意识进食</b>——大包装、边看屏幕边吃，份量感消失</li>
+    </ul>
+    <p>下面每一节都围绕这个逻辑展开。</p>
+
+    <div class="ev" data-for="g0">
+      <b>研究怎么说：</b>Hall 等（<i>Cell Metabolism</i>, 2019）在代谢病房做了 4 周随机对照交叉试验：同一批人吃超加工饮食时，每天自发多摄入约 500 kcal，两周增重约 0.9 kg；换成能量密度和宏量营养素匹配的未加工饮食后，两周减重约 0.9 kg。说明「食物加工程度」本身会影响吃多少，而不只是意志力。
+    </div>
+    <button class="evtog" data-t="g0">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 02 ========== -->
+<section id="day">
+  <div class="wrap">
+    <div class="sec-n">02 / 一天的吃法</div>
+    <h2>不用算卡路里，先把几个时间点排对</h2>
+    <p class="lead">早餐吃什么、中午怎么分盘、下午零食怎么取、晚餐离睡多久——这几件事决定了当天饮食的基本盘。</p>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">起床后 1 小时内</div>
+        <div class="tl-t">早餐把蛋白质放到 25–30 g</div>
+        <div class="spec">25–30 g 蛋白质 · 别只吃碳水</div>
+        <div class="tl-d">
+          <p>白粥加馒头、或面包加果汁的早餐几乎全是碳水，两小时后就饿。把蛋白质提到 25–30 g——<b>2 个鸡蛋加一杯牛奶/无糖豆浆</b>，或希腊酸奶加燕麦——饱腹更久，也有利于维持肌肉。</p>
+          <p>不必追求「完美早餐」。在原有早餐上加一个鸡蛋、一杯奶，就是可执行的起点。</p>
+          <div class="ev" data-for="d0">
+            <b>研究怎么说：</b>每餐约 20–30 g 蛋白质可较好刺激肌肉蛋白合成；Areta 等（<i>Journal of Physiology</i>, 2013）与 Mamerow 等（<i>Journal of Nutrition</i>, 2014）显示，把蛋白质较均匀地分到三餐，比集中在晚餐更有利于全天肌肉蛋白合成。中国居民膳食指南建议奶类 300–500 ml/天、动物性食物 120–200 g/天，可作为蛋白质来源的参考。
+          </div>
+          <button class="evtog" data-t="d0">展开依据</button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">上午</div>
+        <div class="tl-t">水放在手边，含糖饮料不进门</div>
+        <div class="spec">水 1500–1700 ml/天 · 含糖饮料 0</div>
+        <div class="tl-d">
+          <p>口渴有时会被误认成饿。把水杯或水瓶放在桌上，比「提醒自己多喝水」有效。含糖饮料是液体热量里最没有饱腹感的一类，一罐 330 ml 可乐约含 35 g 糖。</p>
+          <p>无糖茶、黑咖啡、气泡水可以作为替代，但别把「零糖」当成可以无限喝的通行证。</p>
+        </div>
+        <div class="ev" data-for="d1">
+          <b>研究怎么说：</b>WHO（2015）建议成人与儿童游离糖摄入低于总能量 10%，最好低于 5%；中国居民膳食指南（2022）建议添加糖每天不超过 50 g，最好控制在 25 g 以下。含糖饮料是游离糖的主要来源之一。
+        </div>
+        <button class="evtog" data-t="d1">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i></i></div>
+        <div class="tl-time">午餐</div>
+        <div class="tl-t">用餐盘比例，不用计算 App</div>
+        <div class="spec">1/2 蔬菜 · 1/4 蛋白 · 1/4 主食</div>
+        <div class="tl-d">
+          <p>把盘子分成四份：<b>一半蔬菜</b>（其中一半深色蔬菜），<b>四分之一蛋白质</b>（鱼、禽、蛋、瘦肉、豆制品），<b>四分之一主食</b>（至少一半全谷物或杂豆）。这个比例不保证每一餐完美，但能防止「一顿全是碳水」。</p>
+          <p>外卖也可以按这个顺序点：先选一个蔬菜、一个蛋白质，再决定主食。</p>
+        </div>
+        <div class="ev" data-for="d2">
+          <b>研究怎么说：</b>哈佛公共卫生学院的「健康饮食餐盘」给出同一比例：蔬菜水果占一半，全谷物占四分之一，优质蛋白占四分之一。中国居民膳食指南（2022）建议蔬菜 300–500 g/天、水果 200–350 g/天、谷类 200–300 g/天（其中全谷物和杂豆 50–150 g）、动物性食物 120–200 g/天。
+        </div>
+        <button class="evtog" data-t="d2">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">下午</div>
+        <div class="tl-t">零食按份取，不抱着包装吃</div>
+        <div class="spec">坚果 10 g/次 · 先装盘</div>
+        <div class="tl-d">
+          <p>下午饿是正常的。关键是「取出你要吃的量，再把包装放回去」，而不是把整袋放在手边。坚果、酸奶、水果通常比饼干和薯片更好，但坚果热量密度高，10 g 左右（约 7–8 颗杏仁）就够一次。</p>
+          <p>如果下午经常饿到失控，先回头看午餐的蛋白质和蔬菜够不够，而不是靠零食补窟窿。</p>
+        </div>
+        <div class="ev" data-for="d3">
+          <b>研究怎么说：</b>Cochrane 系统综述（2015，CD011045）汇总了包装、餐具尺寸对进食量的影响：减小包装或餐具尺寸可以小幅但方向一致地减少摄入。效果不夸张，但不需要额外意志力，属于「改环境」而不是「对抗食欲」。
+        </div>
+        <button class="evtog" data-t="d3">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">晚餐</div>
+        <div class="tl-t">离睡觉 4–6 小时，至少 3 小时</div>
+        <div class="spec amb">4–6 小时 · 至少 3 小时</div>
+        <div class="tl-d">
+          <p>晚餐太晚、太饱，会影响睡眠（见睡眠专题）。如果白天吃得少、晚上暴食，本质是白天结构没搭好。把蛋白质和蔬菜分到午餐，晚餐自然不需要「补回来」。</p>
+          <p>如果做不到 4–6 小时，至少留出 3 小时；对胃食管反流的人，临床建议睡前 4 小时不进食。对大多数人，关键仍是总结构与总量，不必把时间点当成绝对禁令。</p>
+        </div>
+        <div class="ev" data-for="d4">
+          <b>研究怎么说：</b>Chung 等（<i>International Journal of Environmental Research and Public Health</i>, 2020, n=793）发现晚餐距睡眠 &lt;3 小时主要与夜间觉醒增加相关（OR 1.61），对入睡延迟无显著影响；Fujiwara 等（<i>American Journal of Gastroenterology</i>, 2005）的配对病例对照研究显示，晚餐距躺下 &lt;3 小时与胃食管反流症状的关联更强（调整吸烟、饮酒、BMI 后 OR 7.45）。这类研究是观察性的，不能直接推出「早吃就能治好失眠」。
+        </div>
+        <button class="evtog" data-t="d4">展开依据</button>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot b"><i></i></div>
+        <div class="tl-time">睡前</div>
+        <div class="tl-t">真饿可以少量，别用酒精助眠</div>
+        <div class="spec">少量 · 不喝酒</div>
+        <div class="tl-d">
+          <p>如果睡前饿到睡不着，一小杯酸奶或半个苹果可以；大量进食、甜食和酒精则会干扰睡眠。酒精「助眠」的代价在睡眠专题里已展开：入睡变快，但后半夜 REM 睡眠被压缩、觉醒增加。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note teal">
+      <b>外卖怎么点：</b>先选一个蔬菜、一个蛋白质，再决定主食；酱料分开、米饭减半是默认动作。不需要每顿都「吃草」，只需要避免每顿都是「主食 + 油 + 糖」。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 ========== -->
+<section id="plate">
+  <div class="wrap">
+    <div class="sec-n">03 / 结构</div>
+    <h2>餐盘之外，还有几个总量</h2>
+    <p class="lead">餐盘比例解决「一顿怎么分」，这一节解决「一天吃多少、吃什么」。数字是人群建议，不是每顿必须精确达标。</p>
+
+    <h3>每天 12 种，每周 25 种</h3>
+    <div class="spec">≥12 种/天 · ≥25 种/周</div>
+    <p>多样性不是吃很多，而是「换着吃」：主食里加杂豆，蔬菜换颜色，蛋白质在鱼、蛋、奶、豆之间轮换。这个指标衡量的是饮食质量，不是食量。</p>
+    <div class="ev" data-for="p1">
+      <b>研究怎么说：</b>中国居民膳食指南（2022）建议平均每天摄入 12 种以上食物，每周 25 种以上；以谷类为主，粗细搭配。这里的「种」指食物种类，不要求每样都吃很多。
+    </div>
+    <button class="evtog" data-t="p1">展开依据</button>
+
+    <h3>蛋白质：分散到三餐</h3>
+    <div class="spec">按体重 0.8–1.2 g/kg · 每餐 20–30 g</div>
+    <p>一个 60 kg 的成年人，一天大约需要 48–72 g 蛋白质（体力活动多、老年人取偏高值）。集中在晚餐一顿吃 60 g，不如三餐各 20–30 g。老年人（65 岁以上）建议按 1.0–1.2 g/kg 安排，并优先优质蛋白。</p>
+    <div class="ev" data-for="p2">
+      <b>研究怎么说：</b>中国居民膳食指南（2022）对 65 岁以上人群建议蛋白质 1.0–1.2 g/kg 体重；Areta 等（2013）与 Mamerow 等（2014）显示均匀分配蛋白质优于集中摄入。肾功能异常者的蛋白质摄入需要医生或临床营养师单独设定，不能照搬人群建议。
+    </div>
+    <button class="evtog" data-t="p2">展开依据</button>
+
+    <h3>全谷物与纤维</h3>
+    <div class="spec">全谷物 50–150 g · 纤维 25–30 g</div>
+    <p>把一部分白米白面换成燕麦、糙米、全麦、杂豆。纤维增加饱腹感、平稳餐后血糖，也喂养肠道菌群。突然加太多会胀气，用 2–4 周慢慢加，同时多喝水。</p>
+    <div class="ev" data-for="p3">
+      <b>研究怎么说：</b>Reynolds 等（<i>Lancet</i>, 2019）汇总 185 项前瞻研究与 58 项随机对照试验：膳食纤维摄入最高组相比最低组，全因死亡与心血管疾病风险低 15–30%；每日 25–29 g 纤维与最低风险相关。这是观察性证据为主，结论指向「多吃纤维的人群更健康」，不等于单纯补纤维就能治病。
+    </div>
+    <button class="evtog" data-t="p3">展开依据</button>
+
+    <h3>盐、油、糖：三个上限</h3>
+    <div class="spec amb">盐 &lt;5 g · 油 25–30 g · 添加糖最好 ≤25 g</div>
+    <p>这三个数字的作用是「设上限」，不是「必须吃满」。酱油、蚝油、豆瓣酱、腌制食品都含盐；坚果、油炸食品、加工肉都含油。看配料表比看广告词可靠。</p>
+    <div class="ev" data-for="p4">
+      <b>研究怎么说：</b>WHO 建议成人盐摄入低于 5 g/天（钠低于 2 g）；中国居民膳食指南（2022）建议烹调油 25–30 g/天，添加糖每天不超过 50 g、最好控制在 25 g 以下。注意「添加糖」不包括水果和奶类中天然存在的糖。
+    </div>
+    <button class="evtog" data-t="p4">展开依据</button>
+
+    <h3>不需要「零糖零脂」</h3>
+    <div class="spec">看整体模式，不看单一成分</div>
+    <p>地中海饮食、DASH 饮食等整体模式在心血管与代谢结局上有较多证据；而「某一种食物绝对不碰」通常难以长期执行。把餐盘结构搭对，比追逐「超级食物」更实际。</p>
+    <div class="ev" data-for="p5">
+      <b>研究怎么说：</b>PREDIMED 试验（<i>NEJM</i>, 2018 年重新发表）在心血管高危人群中显示，地中海饮食加橄榄油或坚果组的主要心血管事件低于对照组，相对下降约 30%。DASH 饮食模式与血压下降相关。注意：这些试验研究的是整体饮食模式，不是单一营养素或单一食物。
+    </div>
+    <button class="evtog" data-t="p5">展开依据</button>
+  </div>
+</section>
+
+<!-- ========== 04 ========== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-n">04 / 技巧</div>
+    <h2>三个最实用的动作</h2>
+    <p class="lead">看标签、点外食、控制减重速度。这三件事不需要厨房，也不需要营养学学位。</p>
+
+    <h3>看标签只看三件事</h3>
+    <div class="spec">每 100 g · 配料表前 3 位 · NRV%</div>
+    <p>第一，先看「每 100 g」而不是「每份」，避免份量陷阱；第二，配料表按含量递减排列，前三位是糖、油、精制面粉就要警惕；第三，看 NRV% 判断一份占每日参考值的比例。</p>
+    <p>「无蔗糖」不等于无糖，「零脂肪」不等于低热量。标签上的数字比包装正面的词更可靠。</p>
+    <div class="ev" data-for="s1">
+      <b>标准怎么说：</b>中国《预包装食品营养标签通则》（GB 28050-2011）要求标示能量、核心营养素（蛋白质、脂肪、碳水化合物、钠）及其 NRV%；配料表按加入量递减排列。各品牌可能额外标注糖、饱和脂肪等，阅读时以「每 100 g」为统一口径最稳妥。
+    </div>
+    <button class="evtog" data-t="s1">展开依据</button>
+
+    <h3>外食：先点结构，再谈口味</h3>
+    <div class="spec">1 蔬菜 + 1 蛋白 + 1 主食</div>
+    <p>火锅、烧烤、快餐都可以吃，关键是先保证蔬菜和蛋白质，再决定主食和饮料。蘸料和酱汁分开装，能省下大量盐和油；含糖饮料换成无糖茶或水，是最容易执行的一步。</p>
+
+    <h3>减重速度：每周 0.5–1 kg</h3>
+    <div class="spec">0.5–1 kg/周 · 不追求线性</div>
+    <p>1 kg 脂肪约相当于 7,700 kcal，每天 500 kcal 缺口大致对应每周 0.5 kg。但体重包含水分和糖原波动，前两周掉得快不代表掉的是脂肪。低于 0.5 kg/周通常更容易坚持，也更少掉肌肉。</p>
+    <div class="ev" data-for="s2">
+      <b>研究怎么说：</b>《中国超重/肥胖医学营养治疗指南（2021）》与多数临床指南建议减重速度约 0.5–1 kg/周；过快减重会增加肌肉流失、胆结石与反弹风险。体重管理是长期行为改变，不是短期冲刺。
+    </div>
+    <button class="evtog" data-t="s2">展开依据</button>
+
+    <h3>饱腹感有 20 分钟延迟</h3>
+    <div class="spec">每餐 ≥15–20 分钟</div>
+    <p>大脑接收到饱腹信号需要时间。吃得太快，往往在「感觉饱」之前已经吃超。把吃饭时间拉长到 15–20 分钟、每口放下筷子，是最便宜的控制份量方法。</p>
+    <p>这不是要求你每顿都慢条斯理——只要比现在的速度快餐慢一点，就有效。</p>
+  </div>
+</section>
+
+<!-- ========== 05 ========== -->
+<section id="env">
+  <div class="wrap">
+    <div class="sec-n">05 / 环境</div>
+    <h2>厨房：让健康选项更容易拿到</h2>
+    <p class="lead">这一节不需要意志力，只需要改几个摆放位置和购物习惯。环境的作用温和，但可以长期累积。</p>
+
+    <h3>可见性决定选择</h3>
+    <div class="spec">台面只放水果/坚果 · 零食不透明收纳</div>
+    <p>眼睛先于胃口。把水果洗好放台面、零食放进不透明盒子或高处，会让「顺手拿」的对象发生变化。这不是心理暗示，是减少每一次进食的决策成本。</p>
+    <div class="ev" data-for="e1">
+      <b>研究怎么说：</b>Cochrane 系统综述（2015）显示，减小包装或餐具尺寸对摄入量有方向一致的小幅影响；环境设计的效果通常温和，但胜在不需要每次都靠自控。不要期待「换个盘子就能瘦」，它只是让默认选项更有利。
+    </div>
+    <button class="evtog" data-t="e1">展开依据</button>
+
+    <h3>购物：按清单，别在饿的时候去</h3>
+    <div class="spec">清单 · 饱腹后购物</div>
+    <p>饿着逛超市，高热量食品的购买量容易上升。列清单、饭后去、线上按清单买，都能减少冲动型囤货。囤货本身不是问题，问题是把高热量零食囤在手边。</p>
+
+    <h3>备餐：把「需要加工」变成「打开就能吃」</h3>
+    <div class="spec">洗切装盒 · 3 天量</div>
+    <p>蔬菜洗好切好、鸡胸或豆腐分装、杂粮饭一次煮 3 天的量。让健康选项的启动成本低于零食，才有可持续性。备餐不必精确到每克，目标是「饿的时候有东西可拿」。</p>
+
+    <div class="two">
+      <div class="pnl y">
+        <h4>建议</h4>
+        <ul>
+          <li>每餐先夹蔬菜，再装主食和肉</li>
+          <li>蛋白质分散到三餐</li>
+          <li>水和水果放在视线内</li>
+          <li>外食先点结构，再谈口味</li>
+        </ul>
+      </div>
+      <div class="pnl n">
+        <h4>避免</h4>
+        <ul>
+          <li>用果汁、奶茶代替水</li>
+          <li>抱着整袋零食吃</li>
+          <li>把晚餐当一天唯一正餐</li>
+          <li>追求「零糖零脂」的极端</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 06 ========== -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-n">06 / 节奏</div>
+    <h2>怎么开始：四周推进</h2>
+    <p class="lead">别一次全改。第一周只记录，第二周加早餐和蔬菜，第三周才动零食环境。顺序对了，执行难度会明显下降。</p>
+
+    <h4>第 1 周 · 只记录，不计算</h4>
+    <p>拍三餐照片，不称重、不算热量。一周后回看：哪几餐是「主食 + 油 + 糖」的组合？哪一餐蔬菜最少？先看见问题，再改。</p>
+
+    <h4>第 2 周 · 早餐蛋白质 + 蔬菜量</h4>
+    <p>早餐加到 25–30 g 蛋白质；午晚各保证一份蔬菜。这两条一上，通常最先感受到的是下午不再那么饿、加餐冲动减少。</p>
+
+    <h4>第 3 周 · 标签 + 零食环境</h4>
+    <p>买零食前看配料表前三位和「每 100 g」；把零食移出视线，水果放到台面。不用戒掉零食，只改「拿到的难度」。</p>
+
+    <h4>第 4 周 · 外食策略 + 复盘</h4>
+    <p>固定两个外食策略（例如先点蔬菜、酱料分开）；复盘哪条最容易坚持、哪条最容易被社交打乱。留下能执行的，删掉需要完美条件的。</p>
+
+    <div class="note teal">
+      <b>评估节点：</b>连续执行 2–4 周后再判断。体重会因为水分、盐分和月经周期波动，别用单日数字否定一周的努力；更稳的指标是腰围、精力、饥饿感和饮食结构。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 07 ========== -->
+<section id="when">
+  <div class="wrap">
+    <div class="sec-n">07 / 边界</div>
+    <h2>这几种情况，别只靠饮食指南</h2>
+    <p class="lead">人群膳食指南是给大多数健康人的建议，不是处方。以下情况需要医生或临床营养师个体化评估。</p>
+
+    <div class="card r">
+      <div class="card-h" style="color:var(--red)">出现以下任一情况，请找专业人士</div>
+      <ul>
+        <li><b>不明原因体重下降</b>——6 个月内下降超过体重的 5%，且没有刻意减重，先排查疾病，不要当成「代谢好」。</li>
+        <li><b>BMI ≥24 且伴高血压、糖尿病、脂肪肝</b>，或 BMI ≥28——需要个体化的能量与营养方案，而不是照搬通用餐盘。</li>
+        <li><b>糖尿病、慢性肾病、痛风、肝硬化</b>——蛋白质、钾、嘌呤、钠的限额各不相同，必须由临床营养师调整。</li>
+        <li><b>孕期、哺乳期、儿童青少年、65 岁以上</b>——营养需求与普通成人不同，重点不只是「控制热量」。</li>
+        <li><b>进食障碍信号</b>——暴食、催吐、极端限制、对体重过度焦虑。这类情况需要专科治疗，饮食 App 和自律打卡可能加重问题。</li>
+      </ul>
+    </div>
+
+    <div class="note teal">
+      <b>补剂不是捷径：</b>在没有明确缺乏的情况下，复合维生素、蛋白粉、代餐通常不能替代真实食物。若考虑补充剂，先确认是否真的缺乏，并注意与药物的相互作用。
+    </div>
+
+    <div class="next-h">继续读</div>
+    <div class="next">
+      <a href="exercise.html">
+        <div class="n-k">02 / 锻炼</div>
+        <div class="n-t">体能是按剂量攒出来的</div>
+        <div class="n-g">继续读 →</div>
+      </a>
+      <a href="sleep.html">
+        <div class="n-k">03 / 睡眠</div>
+        <div class="n-t">好睡眠是白天修出来的</div>
+        <div class="n-g">继续读 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 08 ========== -->
+<section id="refs">
+  <div class="wrap">
+    <div class="sec-n">08 / 来源</div>
+    <h2>参考依据与来源</h2>
+    <p class="lead">上文每条建议的展开依据都对应下面这些指南或原始研究。点击依据段落末尾的蓝色编号可跳转到对应条目。</p>
+
+    <h3>膳食指南与共识</h3>
+    <div class="reflist">
+      <div class="ref" id="r1"><span class="id">R1</span><div><b>中国营养学会</b> — 《中国居民膳食指南（2022）》。蔬菜 300–500 g、水果 200–350 g、谷类 200–300 g（全谷物和杂豆 50–150 g）、动物性食物 120–200 g、奶 300–500 ml、大豆坚果 25–35 g、盐 &lt;5 g、油 25–30 g、添加糖 ≤50 g（最好 ≤25 g）；平均每天 12 种以上食物、每周 25 种以上；65 岁以上蛋白质 1.0–1.2 g/kg。</div></div>
+      <div class="ref" id="r2"><span class="id">R2</span><div><b>World Health Organization</b> — Healthy diet fact sheet（2020 更新）。成人盐摄入 &lt;5 g/天（钠 &lt;2 g）；游离糖 &lt;10% 总能量，最好 &lt;5%；脂肪 &lt;30% 总能量；蔬菜水果 ≥400 g/天。</div></div>
+      <div class="ref" id="r3"><span class="id">R3</span><div><b>Harvard T.H. Chan School of Public Health</b> — The Healthy Eating Plate。餐盘一半为蔬菜水果，四分之一为全谷物，四分之一为优质蛋白；并建议限制含糖饮料。</div></div>
+    </div>
+
+    <h3>能量、超加工与体重</h3>
+    <div class="reflist">
+      <div class="ref" id="r4"><span class="id">R4</span><div><b>Hall KD, et al.</b> Ultra-processed diets cause excess calorie intake and weight gain: an inpatient randomized controlled trial of ad libitum food intake. <i>Cell Metabolism</i>, 2019, 30(1):67–77. — n=20，代谢病房 4 周交叉设计；超加工饮食期每天多摄入约 500 kcal，两周增重约 0.9 kg。</div></div>
+      <div class="ref" id="r5"><span class="id">R5</span><div><b>《中国超重/肥胖医学营养治疗指南（2021）》</b> — 建议减重速度约 0.5–1 kg/周；强调长期行为改变与个体化能量缺口，避免过快减重导致肌肉流失与反弹。</div></div>
+    </div>
+
+    <h3>蛋白质</h3>
+    <div class="reflist">
+      <div class="ref" id="r6"><span class="id">R6</span><div><b>Areta JL, et al.</b> Timing and distribution of protein ingestion during prolonged recovery from resistance exercise alters myofibrillar protein synthesis. <i>Journal of Physiology</i>, 2013, 591(9):2319–2331. — 蛋白质分 4 次摄入比 2 次大剂量更有利于肌肉蛋白合成。</div></div>
+      <div class="ref" id="r7"><span class="id">R7</span><div><b>Mamerow MM, et al.</b> Dietary protein distribution positively influences 24-h muscle protein synthesis in healthy adults. <i>Journal of Nutrition</i>, 2014, 144(6):876–880. — 在总蛋白相同的情况下，三餐均匀分配比集中在晚餐更能促进 24 小时肌肉蛋白合成。</div></div>
+    </div>
+
+    <h3>纤维、饮食模式与慢病</h3>
+    <div class="reflist">
+      <div class="ref" id="r8"><span class="id">R8</span><div><b>Reynolds A, et al.</b> Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <i>Lancet</i>, 2019, 393(10170):434–445. — 185 项前瞻研究 + 58 项 RCT；纤维摄入最高组全因死亡与心血管疾病风险低 15–30%，每日 25–29 g 纤维与最低风险相关。</div></div>
+      <div class="ref" id="r9"><span class="id">R9</span><div><b>PREDIMED Study Investigators.</b> Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. <i>New England Journal of Medicine</i>, 2018, 378(25):e34. — 心血管高危人群，地中海饮食 + 橄榄油/坚果组主要心血管事件相对下降约 30%。</div></div>
+      <div class="ref" id="r10"><span class="id">R10</span><div><b>DASH 饮食相关研究</b> — 富含蔬菜、水果、低脂乳制品并限制饱和脂肪与钠的饮食模式，与血压下降相关（Appel LJ, et al. <i>NEJM</i>, 1997；后续综述多篇）。</div></div>
+    </div>
+
+    <h3>糖、盐与标签</h3>
+    <div class="reflist">
+      <div class="ref" id="r11"><span class="id">R11</span><div><b>World Health Organization</b> — Guideline: Sugars intake for adults and children, 2015. — 建议游离糖 &lt;10% 总能量，有条件时进一步降至 &lt;5%。</div></div>
+      <div class="ref" id="r12"><span class="id">R12</span><div><b>World Health Organization</b> — Guideline: Sodium intake for adults and children（2012）及后续报告。 — 成人钠摄入 &lt;2 g/天（约合盐 &lt;5 g/天）。</div></div>
+      <div class="ref" id="r13"><span class="id">R13</span><div><b>GB 28050-2011《预包装食品营养标签通则》</b> — 强制标示能量、蛋白质、脂肪、碳水化合物、钠及其 NRV%；配料表按加入量递减排列。购买包装食品时以「每 100 g」为统一比较口径。</div></div>
+    </div>
+
+    <h3>进食环境与时间</h3>
+    <div class="reflist">
+      <div class="ref" id="r14"><span class="id">R14</span><div><b>Hollands GJ, et al.</b> Portion, package or tableware size for changing selection and consumption of food, alcohol and tobacco. <i>Cochrane Database of Systematic Reviews</i>, 2015, CD011045. — 减小包装或餐具尺寸可小幅但一致地减少摄入量。</div></div>
+      <div class="ref" id="r15"><span class="id">R15</span><div><b>Chung S, et al.</b> <i>International Journal of Environmental Research and Public Health</i>, 2020, n=793；<b>Fujiwara Y, et al.</b> <i>American Journal of Gastroenterology</i>, 2005. — 晚餐距睡眠 &lt;3 小时主要增加夜间觉醒（OR 1.61）；与胃食管反流症状的关联在病例对照研究中更强。观察性证据，不能直接推断因果。</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>内容基于截至 2026 年 11 月的公开研究与临床指南整理。文中每条建议的展开依据均可在「依据来源」中定位到原始文献。</p>
+    <p style="margin-top:12px">本页用于科普与自我调整参考，<b>不能替代医生或临床营养师的诊断与处方</b>。慢性病患者、孕期哺乳期人群、儿童青少年及老年人，请在专业人士指导下调整饮食。</p>
+    <div class="related">
+      <a href="index.html">生活指南首页</a>
+      <a href="exercise.html">锻炼指南</a>
+      <a href="sleep.html">睡眠指南</a>
+    </div>
+    <a class="repo" href="https://github.com/isnotry/life-guide" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 · Open source on GitHub</a>
+  </div>
+</footer>
+
+<script>
+var MAP={
+  g0:'r4',d0:'r6',d1:'r11',d2:'r3',d3:'r14',d4:'r15',
+  p1:'r1',p2:'r1',p3:'r8',p4:'r2',p5:'r9',
+  s1:'r13',s2:'r5',e1:'r14'
+};
+
+[].slice.call(document.querySelectorAll('.evtog')).forEach(function(b){
+  b.addEventListener('click',function(){
+    var box=document.querySelector('.ev[data-for="'+b.dataset.t+'"]');
+    if(!box)return;
+    var on=box.classList.toggle('on');
+    b.textContent=on?'收起依据':'展开依据';
+  });
+});
+
+[].slice.call(document.querySelectorAll('.ev')).forEach(function(box){
+  var id=MAP[box.dataset.for];
+  if(!id)return;
+  var tag=document.createElement('span');
+  tag.className='evref';tag.textContent=id.toUpperCase()+' ↗';
+  tag.addEventListener('click',function(){
+    var t=document.getElementById(id);
+    if(!t)return;
+    t.scrollIntoView({behavior:'smooth',block:'center'});
+    t.classList.add('hit');
+    setTimeout(function(){t.classList.remove('hit')},1800);
+  });
+  box.appendChild(tag);
+});
+
+var secs=[].slice.call(document.querySelectorAll('section'));
+var links=[].slice.call(document.querySelectorAll('nav a'));
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+130,cur=0;
+  secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+  links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+});
+</script>
+</body>
+</html>
