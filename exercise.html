@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)">
+<script>
+(function(){try{var t=localStorage.getItem('life-guide-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
 <title>体能是按剂量攒出来的 · 锻炼指南 · 生活指南</title>
 <meta name="description" content="把运动拆成一周里的几份剂量：有氧、力量、日常步数、久坐打断与恢复。每条建议都有数字口径，关键结论附可展开的研究依据。">
 <meta name="keywords" content="锻炼指南, 有氧运动, 力量训练, 步数, 久坐, 运动恢复, 生活指南">
@@ -82,15 +87,45 @@
 }
 </script>
 <style>
+/* theme tokens: dark is default; system light applies only when no manual choice */
 :root{
+  color-scheme:dark;
   --bg:#0d1117; --surface:#161b22; --surface2:#1c2230; --surface3:#232a38;
   --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
   --text:#e6edf3; --text2:#98a4b3; --text3:#6e7a8a;
   --teal:#5DCAA5; --teal-dim:rgba(93,202,165,.14);
-  --amber:#EF9F27; --amber-dim:rgba(239,159,39,.14);
-  --red:#E24B4A; --red-dim:rgba(226,75,74,.14);
-  --blue:#58a6ff; --blue-dim:rgba(88,166,255,.14);
+  --teal-border:rgba(93,202,165,.28); --teal-border-strong:rgba(93,202,165,.40);
+  --amber:#EF9F27; --amber-dim:rgba(239,159,39,.14); --amber-border-strong:rgba(239,159,39,.40);
+  --red:#E24B4A; --red-dim:rgba(226,75,74,.14); --red-border:rgba(226,75,74,.25);
+  --blue:#58a6ff; --blue-dim:rgba(88,166,255,.14); --blue-border:rgba(88,166,255,.28); --blue-border-strong:rgba(88,166,255,.40); --blue-dim-strong:rgba(88,166,255,.30);
+  --nav-bg:rgba(13,17,23,.9);
   --r:12px; --r-lg:16px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme]){
+    color-scheme:light;
+    --bg:#f7f5ef; --surface:#ffffff; --surface2:#eee9df; --surface3:#e2dbcd;
+    --border:rgba(23,32,42,.12); --border2:rgba(23,32,42,.22);
+    --text:#1f2933; --text2:#43505e; --text3:#5f6b7a;
+    --teal:#0f766e; --teal-dim:rgba(15,118,110,.10);
+    --teal-border:rgba(15,118,110,.28); --teal-border-strong:rgba(15,118,110,.42);
+    --amber:#b45309; --amber-dim:rgba(180,83,9,.10); --amber-border-strong:rgba(180,83,9,.42);
+    --red:#b91c1c; --red-dim:rgba(185,28,28,.10); --red-border:rgba(185,28,28,.26);
+    --blue:#1d4ed8; --blue-dim:rgba(29,78,216,.10); --blue-border:rgba(29,78,216,.26); --blue-border-strong:rgba(29,78,216,.42); --blue-dim-strong:rgba(29,78,216,.22);
+    --nav-bg:rgba(247,245,239,.9);
+  }
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f7f5ef; --surface:#ffffff; --surface2:#eee9df; --surface3:#e2dbcd;
+  --border:rgba(23,32,42,.12); --border2:rgba(23,32,42,.22);
+  --text:#1f2933; --text2:#43505e; --text3:#5f6b7a;
+  --teal:#0f766e; --teal-dim:rgba(15,118,110,.10);
+  --teal-border:rgba(15,118,110,.28); --teal-border-strong:rgba(15,118,110,.42);
+  --amber:#b45309; --amber-dim:rgba(180,83,9,.10); --amber-border-strong:rgba(180,83,9,.42);
+  --red:#b91c1c; --red-dim:rgba(185,28,28,.10); --red-border:rgba(185,28,28,.26);
+  --blue:#1d4ed8; --blue-dim:rgba(29,78,216,.10); --blue-border:rgba(29,78,216,.26); --blue-border-strong:rgba(29,78,216,.42); --blue-dim-strong:rgba(29,78,216,.22);
+  --nav-bg:rgba(247,245,239,.9);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -109,12 +144,12 @@ body{
 .related{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .related a{font-size:13px;color:var(--text2);text-decoration:none;border:1px solid var(--border);
   border-radius:999px;padding:4px 12px;transition:.15s}
-.related a:hover{color:var(--teal);border-color:rgba(93,202,165,.4)}
+.related a:hover{color:var(--teal);border-color:var(--teal-border-strong)}
 .next-h{font-size:12.5px;color:var(--text3);letter-spacing:.08em;margin:30px 0 12px}
 .next{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .next a{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
   padding:14px 16px;text-decoration:none;transition:.2s}
-.next a:hover{border-color:rgba(93,202,165,.4);transform:translateY(-1px)}
+.next a:hover{border-color:var(--teal-border-strong);transform:translateY(-1px)}
 .next .n-k{font-size:11px;letter-spacing:.12em;color:var(--text3);margin-bottom:4px}
 .next .n-t{font-size:14.5px;color:var(--text);font-weight:600;line-height:1.6}
 .next .n-g{font-size:12px;color:var(--teal);margin-top:6px}
@@ -128,7 +163,7 @@ h1 em{font-style:normal;color:var(--teal)}
 .pill{font-size:13px;border-radius:999px;padding:5px 13px;background:var(--surface2);
   border:1px solid var(--border);color:var(--text2)}
 
-nav{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:0 24px}
 nav .wrap::-webkit-scrollbar{display:none}
 nav a{color:var(--text2);text-decoration:none;font-size:13px;white-space:nowrap;
@@ -153,9 +188,9 @@ ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;heigh
   background:none;color:var(--teal);font-size:13px;font-weight:600}
 
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;margin-bottom:20px}
-.card.t{border-color:rgba(93,202,165,.28)}
-.card.b{border-color:rgba(88,166,255,.28)}
-.card.r{border-color:rgba(226,75,74,.25)}
+.card.t{border-color:var(--teal-border)}
+.card.b{border-color:var(--blue-border)}
+.card.r{border-color:var(--red-border)}
 .card-h{font-size:16.5px;font-weight:600;margin-bottom:12px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
 .tagline{font-size:12px;border-radius:5px;padding:1px 8px;font-weight:500;margin-right:8px}
@@ -186,8 +221,8 @@ ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;heigh
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
 .pnl{border-radius:var(--r-lg);padding:20px 22px;border:1px solid var(--border)}
-.pnl.y{background:var(--teal-dim);border-color:rgba(93,202,165,.25)}
-.pnl.n{background:var(--red-dim);border-color:rgba(226,75,74,.25)}
+.pnl.y{background:var(--teal-dim);border-color:var(--teal-border)}
+.pnl.n{background:var(--red-dim);border-color:var(--red-border)}
 .pnl h4{margin:0 0 12px;font-size:15px}
 .pnl.y h4{color:var(--teal)} .pnl.n h4{color:var(--red)}
 .pnl li{margin-bottom:9px;font-size:14.5px;line-height:1.7}
@@ -204,7 +239,7 @@ ol li:before{content:counter(li);position:absolute;left:0;top:0;width:auto;heigh
 .evtog:hover{color:var(--teal)}
 .evref{display:inline-block;font-size:11.5px;color:var(--blue);background:var(--blue-dim);
   border-radius:5px;padding:1px 8px;margin:8px 5px 0 0;font-family:ui-monospace,monospace;cursor:pointer}
-.evref:hover{background:rgba(88,166,255,.3)}
+.evref:hover{background:var(--blue-dim-strong)}
 
 /* refs */
 .reflist{display:flex;flex-direction:column;gap:9px;margin-top:12px}
@@ -226,11 +261,91 @@ footer .repo:hover{color:var(--teal)}
   body{font-size:15.5px} section{padding:44px 0} header{padding:54px 0 34px}
   .grid2,.two,.next{grid-template-columns:1fr}
 }
+/* === theme toggle + mobile polish === */
+header{position:relative}
+.theme-toggle{position:absolute;top:18px;right:max(18px,calc((100vw - 720px)/2 + 24px));z-index:80;
+  width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;
+  border:1px solid var(--border2);background:var(--surface2);color:var(--text2);cursor:pointer;
+  transition:background .15s,border-color .15s,color .15s;-webkit-tap-highlight-color:transparent}
+.theme-toggle:hover{color:var(--text);background:var(--surface3)}
+.theme-toggle:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.theme-toggle svg{width:20px;height:20px}
+.theme-toggle .sun{display:none}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme]) .theme-toggle .sun{display:block}
+  :root:not([data-theme]) .theme-toggle .moon{display:none}
+}
+:root[data-theme="light"] .theme-toggle .sun{display:block}
+:root[data-theme="light"] .theme-toggle .moon{display:none}
+
+img,svg{max-width:100%}
+a,button{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+section[id],h2[id],h3[id],.ref[id]{scroll-margin-top:72px}
+::selection{background:var(--teal-dim);color:var(--text)}
+
+pre{overflow-x:auto;background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:14px 16px;font-size:13px;line-height:1.65;margin:0 0 18px;-webkit-overflow-scrolling:touch}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:var(--surface2);
+  border-radius:4px;padding:1px 5px;color:var(--text)}
+pre code{background:none;padding:0;font-size:inherit}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 18px}
+table{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:14px;line-height:1.6}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{color:var(--text);background:var(--surface2);font-weight:600;white-space:nowrap}
+td{color:var(--text2)}
+
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  header{padding:78px 0 36px}
+  body{font-size:16px;line-height:1.8}
+  p,li{line-height:1.8}
+  section{padding:38px 0}
+  h1{font-size:clamp(26px,7.2vw,30px);line-height:1.3}
+  h2{font-size:21px}
+  h3{font-size:17px}
+  .lead{font-size:16px;margin-bottom:24px}
+  nav .wrap{padding:0 14px;gap:0;scroll-snap-type:x proximity}
+  nav a{min-height:46px;display:flex;align-items:center;padding:0 12px;font-size:13px;scroll-snap-align:start}
+  .topicbar{gap:4px 8px;font-size:12px;line-height:1.4}
+  .topicbar a{min-height:36px}
+  .topic{padding:18px 18px 16px}
+  .topic h3{font-size:18.5px}
+  .topic-meta{flex-wrap:wrap;gap:6px}
+  .card,.pnl{padding:18px}
+  .grid2,.two,.next{grid-template-columns:1fr}
+  .next a{min-height:44px;padding:12px 14px}
+  .related a{min-height:40px;display:inline-flex;align-items:center;padding:4px 12px}
+  .evtog{min-height:44px;display:inline-flex;align-items:center;padding:8px 0 0}
+  .evref{min-height:32px;display:inline-flex;align-items:center;padding:2px 9px;margin-top:10px}
+  .ref{padding:12px 14px;gap:10px;overflow-wrap:anywhere}
+  .ref .id{font-size:10.5px}
+  .tl-item{padding-left:30px}
+  .tl-item:before{left:8px}
+  table{min-width:520px}
+}
+@media (max-width:400px){
+  .wrap{padding:0 16px}
+  h1{font-size:27px}
+  .pills{gap:6px}
+  .pill{font-size:12px;padding:4px 10px}
+  .theme-toggle{width:44px;height:44px;top:12px;right:14px}
+  .topicbar .tico{width:15px;height:15px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
 </style>
 </head>
 <body>
 
 <header>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换亮色/暗色主题" title="切换亮色/暗色主题">
+    <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 12.5 4a7 7 0 0 0 7.5 10.5z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+
   <div class="wrap">
     <div class="topicbar">
       <a href="index.html">生活指南</a>
@@ -297,15 +412,15 @@ footer .repo:hover{color:var(--teal)}
     </ul>
     <p>下面每一节都围绕这个逻辑展开。</p>
 
-    <div class="ev" data-for="g0">
+    <div class="ev" id="ev-g0" data-for="g0">
       <b>研究怎么说：</b>WHO《2020 身体活动与久坐行为指南》建议成人每周 150–300 分钟中等强度有氧，或 75–150 分钟高强度，或两者组合；并建议每周至少 2 天进行涉及主要肌群的力量训练。Mandsager 等（<i>JAMA Network Open</i>, 2018, n=122,007）发现心肺适能越高，全因死亡风险越低；与最低适能组相比，最高适能组的风险显著更低。
     </div>
-    <button class="evtog" data-t="g0">展开依据</button>
+    <button class="evtog" data-t="g0" aria-expanded="false" aria-controls="ev-g0">展开依据</button>
 
-    <div class="ev" data-for="g1">
+    <div class="ev" id="ev-g1" data-for="g1">
       <b>研究怎么说：</b>Momma 等（<i>British Journal of Sports Medicine</i>, 2022）对 16 项队列研究的 Meta 分析显示，每周 30–60 分钟力量训练与全因死亡风险降低 10–17% 相关；力量训练与有氧训练的效果不能互相替代。这里的数字是观察性关联，不是「练满 60 分钟就能延长寿命」的因果承诺。
     </div>
-    <button class="evtog" data-t="g1">展开依据</button>
+    <button class="evtog" data-t="g1" aria-expanded="false" aria-controls="ev-g1">展开依据</button>
   </div>
 </section>
 
@@ -336,10 +451,10 @@ footer .repo:hover{color:var(--teal)}
         <div class="tl-d">
           <p>久坐是独立风险，不等于「没运动」。即使当天练了 30 分钟，其余 10 小时坐着仍然有害。设一个每小时响的闹钟，起身接水、走楼梯、做 10 个深蹲都算。</p>
         </div>
-        <div class="ev" data-for="t0">
+        <div class="ev" id="ev-t0" data-for="t0">
           <b>研究怎么说：</b>Dempsey 等（<i>Diabetes Care</i>, 2020）等研究显示，每隔 30 分钟用短时活动打断久坐，可改善餐后血糖与胰岛素反应。WHO 2020 指南首次把「限制久坐时间」写成独立建议，而不是只说「达到运动量就行」。
         </div>
-        <button class="evtog" data-t="t0">展开依据</button>
+        <button class="evtog" data-t="t0" aria-expanded="false" aria-controls="ev-t0">展开依据</button>
       </div>
 
       <div class="tl-item">
@@ -360,10 +475,10 @@ footer .repo:hover{color:var(--teal)}
         <div class="tl-d">
           <p>高强度训练会升高核心体温和交感神经活性。睡眠专题建议运动在睡前 3 小时收工；中等强度散步通常不受影响。如果你晚上训练后难以入睡，把强度往前提，而不是直接放弃训练。</p>
         </div>
-        <div class="ev" data-for="t1">
+        <div class="ev" id="ev-t1" data-for="t1">
           <b>研究怎么说：</b>Kredlow 等（<i>Journal of Behavioral Medicine</i>, 2015）的 Meta 分析汇总了急性与长期运动研究：中等强度有氧或抗阻训练总体改善睡眠质量与时长，效应为小到中等。睡前 1 小时内的极高强度运动可能延迟入睡，但个体差异较大——「运动改善睡眠」不是绝对承诺。
         </div>
-        <button class="evtog" data-t="t1">展开依据</button>
+        <button class="evtog" data-t="t1" aria-expanded="false" aria-controls="ev-t1">展开依据</button>
       </div>
 
       <div class="tl-item">
@@ -389,42 +504,42 @@ footer .repo:hover{color:var(--teal)}
     <h3>有氧：150–300 分钟中等，或 75–150 分钟高强度</h3>
     <div class="spec">中等强度 RPE 12–14 · 能说话但不能唱歌</div>
     <p>快走、骑车、游泳、爬楼梯都算。不必一次做完，10 分钟一段累计也有效。判断中等强度最实用的方法是「说话测试」：能完整说句子，但不能唱歌。</p>
-    <div class="ev" data-for="w0">
+    <div class="ev" id="ev-w0" data-for="w0">
       <b>研究怎么说：</b>WHO 2020 指南与 ACSM 立场声明一致建议：成人每周 150–300 分钟中等强度有氧，或 75–150 分钟高强度有氧，或两者等价组合。小于 150 分钟也不是「无效」，只是收益相对少；从 0 到 60 分钟的增量收益最大。
     </div>
-    <button class="evtog" data-t="w0">展开依据</button>
+    <button class="evtog" data-t="w0" aria-expanded="false" aria-controls="ev-w0">展开依据</button>
 
     <h3>力量：每周 2 次，30–60 分钟就够</h3>
     <div class="spec">≥2 次/周 · 覆盖腿/推/拉/髋/核心</div>
     <p>每次 2–4 个动作，每个 2–3 组、8–12 次，做到最后 2 次有点吃力但姿势不变。新手从自重和弹力带开始。30–60 分钟/周的力量训练已与更低死亡风险相关，超过 60 分钟后收益趋于平台。</p>
-    <div class="ev" data-for="w1">
+    <div class="ev" id="ev-w1" data-for="w1">
       <b>研究怎么说：</b>Momma 等（<i>BJSM</i>, 2022）的 Meta 分析显示，每周 30–60 分钟力量训练与全因死亡风险降低 10–17% 相关；WHO 2020 建议每周至少 2 天进行主要肌群的力量训练。力量训练的「剂量」指有效组数，不是健身房停留时间。
     </div>
-    <button class="evtog" data-t="w1">展开依据</button>
+    <button class="evtog" data-t="w1" aria-expanded="false" aria-controls="ev-w1">展开依据</button>
 
     <h3>日常步数：7000–8000 步是性价比区间</h3>
     <div class="spec">约 7000–8000 步/天 · 老年人 6000–8000 步</div>
     <p>步数收益有平台期。对多数成年人，约 7,000–8,000 步/天已能显著降低死亡风险，继续增加收益趋缓；对 60 岁以上人群，收益大约从 6,000 步开始明显，约 8,000 步后趋平。对部分老年女性，4,400 步左右已优于 2,700 步。<b>别把 10,000 步当成硬指标</b>。</p>
-    <div class="ev" data-for="w2">
+    <div class="ev" id="ev-w2" data-for="w2">
       <b>研究怎么说：</b>Paluch 等（<i>Lancet Public Health</i>, 2022）对 15 项队列、47,471 名成人的 Meta 分析：步数越高死亡风险越低，约 7,000–8,000 步后趋于平台，且不同年龄段的拐点不同。Lee 等（<i>JAMA Internal Medicine</i>, 2019）对 16,741 名老年女性的研究显示，约 4,400 步即出现明显收益，约 7,500 步后趋缓。
     </div>
-    <button class="evtog" data-t="w2">展开依据</button>
+    <button class="evtog" data-t="w2" aria-expanded="false" aria-controls="ev-w2">展开依据</button>
 
     <h3>强度怎么判断</h3>
     <div class="spec">说话测试 · RPE · 不用 220-年龄</div>
     <p>「220-年龄」的最大心率公式误差可达 ±10–12 次/分，不适合作为唯一依据。用说话测试和 RPE（自觉用力程度，6–20 或 0–10 量表）更实际。手表的心率区间只能参考，不能替代体感。</p>
-    <div class="ev" data-for="w3">
+    <div class="ev" id="ev-w3" data-for="w3">
       <b>研究怎么说：</b>ACSM 指出，年龄预测最大心率公式的个体误差较大（常见标准差约 10–12 次/分）；RPE 与说话测试是更稳妥的自我强度工具。服用 β 受体阻滞剂等影响心率的药物时，心率区间尤其不可靠，应改用量表与医生建议。
     </div>
-    <button class="evtog" data-t="w3">展开依据</button>
+    <button class="evtog" data-t="w3" aria-expanded="false" aria-controls="ev-w3">展开依据</button>
 
     <h3>进阶：一次只加一个变量</h3>
     <div class="spec">每周 +5–10% 或 +1 组</div>
     <p>「10% 规则」是经验法则，不是定律。更稳妥的做法是：这周只加时长，下周只加重量，不同时加。疼痛和持续疲劳出现时，退回上一周。</p>
-    <div class="ev" data-for="w4">
+    <div class="ev" id="ev-w4" data-for="w4">
       <b>研究怎么说：</b>ACSM 的渐进原则建议逐步增加频率、强度、时间，避免同时大幅增加。对新手而言，先建立规律比追求每周进步更重要；「每周必须加量」反而容易导致过度使用伤。
     </div>
-    <button class="evtog" data-t="w4">展开依据</button>
+    <button class="evtog" data-t="w4" aria-expanded="false" aria-controls="ev-w4">展开依据</button>
   </div>
 </section>
 
@@ -488,18 +603,18 @@ footer .repo:hover{color:var(--teal)}
     <h3>疼痛红绿灯</h3>
     <div class="spec amb">酸胀可继续 · 锐痛要停</div>
     <p>训练后 24–72 小时的肌肉酸胀（DOMS）正常；关节锐痛、肿胀、夜间痛、发热不是「练到位」，是信号。持续超过 2 周，找运动医学或康复科评估。</p>
-    <div class="ev" data-for="r0">
+    <div class="ev" id="ev-r0" data-for="r0">
       <b>研究怎么说：</b>Cheung 等（<i>Sports Medicine</i>, 2003）的综述指出，延迟性肌肉酸痛通常在运动后 24–72 小时达峰，5–7 天内缓解；锐痛、肿胀、活动受限不符合 DOMS 的典型特征，应视为损伤信号。
     </div>
-    <button class="evtog" data-t="r0">展开依据</button>
+    <button class="evtog" data-t="r0" aria-expanded="false" aria-controls="ev-r0">展开依据</button>
 
     <h3>恢复：睡眠是主项</h3>
     <div class="spec">7–9 小时睡眠 · 蛋白质按体重 0.8–1.2 g/kg</div>
     <p>肌肉在睡眠中修复。睡不够时，训练表现和恢复都会下降，受伤风险上升。把睡眠专题的锚点先做好，再谈加量。饮食上保证总能量和蛋白质，比买恢复补剂更实际。</p>
-    <div class="ev" data-for="r1">
+    <div class="ev" id="ev-r1" data-for="r1">
       <b>研究怎么说：</b>睡眠不足与运动表现下降、受伤风险上升相关，机制涉及糖原恢复、激素环境与神经肌肉功能。现有证据多为观察性或小样本实验，不能精确量化「少睡 1 小时等于损失多少训练效果」，但方向一致：恢复不足时加量不划算。
     </div>
-    <button class="evtog" data-t="r1">展开依据</button>
+    <button class="evtog" data-t="r1" aria-expanded="false" aria-controls="ev-r1">展开依据</button>
 
     <h3>休息日不是偷懒</h3>
     <div class="spec">同一肌群通常间隔 48 小时</div>
@@ -508,10 +623,10 @@ footer .repo:hover{color:var(--teal)}
     <h3>老年人加一份平衡</h3>
     <div class="spec">每周 3 天 · 平衡与防跌倒</div>
     <p>65 岁以上在达到有氧与力量建议之外，每周应有 3 天进行平衡训练（如单脚站立、脚跟脚尖走、太极）。目标是防跌倒，不是追求强度。</p>
-    <div class="ev" data-for="r2">
+    <div class="ev" id="ev-r2" data-for="r2">
       <b>研究怎么说：</b>WHO 2020 指南对 65 岁以上人群额外建议：每周 3 天以上进行多成分的平衡与力量训练，以降低跌倒风险；具体方案应结合个人疾病、用药与居家环境评估。
     </div>
-    <button class="evtog" data-t="r2">展开依据</button>
+    <button class="evtog" data-t="r2" aria-expanded="false" aria-controls="ev-r2">展开依据</button>
   </div>
 </section>
 
@@ -649,6 +764,7 @@ var MAP={
     if(!box)return;
     var on=box.classList.toggle('on');
     b.textContent=on?'收起依据':'展开依据';
+    b.setAttribute('aria-expanded',on?'true':'false');
   });
 });
 
@@ -674,6 +790,33 @@ window.addEventListener('scroll',function(){
   secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
   links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
 });
+</script>
+<script>
+(function(){
+  var root=document.documentElement, KEY='life-guide-theme';
+  var mq=window.matchMedia('(prefers-color-scheme: light)');
+  function systemMode(){return mq.matches?'light':'dark';}
+  function currentMode(){return root.getAttribute('data-theme')||systemMode();}
+  function syncButton(){
+    var btn=document.getElementById('themeToggle');
+    if(!btn)return;
+    var next=currentMode()==='dark'?'亮色':'暗色';
+    btn.setAttribute('aria-label','切换到'+next+'模式');
+    btn.title='切换到'+next+'模式';
+  }
+  function setMode(mode,save){
+    root.setAttribute('data-theme',mode);
+    if(save){try{localStorage.setItem(KEY,mode);}catch(e){}}
+    syncButton();
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    syncButton();
+    var btn=document.getElementById('themeToggle');
+    if(btn){btn.addEventListener('click',function(){setMode(currentMode()==='dark'?'light':'dark',true);});}
+    var onChange=function(){if(!root.getAttribute('data-theme'))syncButton();};
+    if(mq.addEventListener){mq.addEventListener('change',onChange);}else if(mq.addListener){mq.addListener(onChange);}
+  });
+})();
 </script>
 </body>
 </html>
